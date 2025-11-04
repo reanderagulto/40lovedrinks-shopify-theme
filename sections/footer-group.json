@@ -14,7 +14,8 @@
     "footer": {
       "type": "footer",
       "settings": {
-        "menu": "footer",
+        "footer_menu": "footer",
+        "footer_logo": "shopify://shop_images/40lovedrinks-logo-large.png",
         "show_payment_icons": true
       }
     }
