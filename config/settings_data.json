@@ -10,6 +10,8 @@
 {
   "current": {
     "type_primary_font": "poppins_n4",
+    "logo": "shopify://shop_images/40lovesdrink-logo-small.png",
+    "menu": "header-navigation",
     "content_for_index": []
   }
 }
