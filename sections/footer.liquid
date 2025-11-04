@@ -39,19 +39,24 @@
 
 {% schema %}
 {
-  "name": "t:general.footer",
-  "settings": [
-    {
-      "type": "link_list",
-      "id": "menu",
-      "label": "t:labels.menu"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_payment_icons",
-      "label": "t:labels.show_payment_icons",
-      "default": true
-    }
-  ]
+    "name": "t:general.footer",
+    "settings": [
+      {
+        "type": "link_list",
+        "id": "footer_menu",
+        "label": "t:labels.menu"
+      },
+      {
+        "type": "image_picker",
+        "id": "footer_logo",
+        "label": "Footer Logo"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_payment_icons",
+        "label": "t:labels.show_payment_icons",
+        "default": true
+      }
+    ]
 }
 {% endschema %}

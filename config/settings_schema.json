@@ -79,5 +79,31 @@
         "default": 4
       }
     ]
-  }
+  },
+  {
+    "name": "Header",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo image"
+      },
+      {
+        "type": "range",
+        "id": "logo_width",
+        "min": 50,
+        "max": 300,
+        "step": 10,
+        "unit": "px",
+        "label": "Logo width",
+        "default": 150
+      },
+      {
+        "type": "link_list",
+        "id": "menu",
+        "label": "Navigation menu"
+      }
+    ]
+  },
+
 ]
