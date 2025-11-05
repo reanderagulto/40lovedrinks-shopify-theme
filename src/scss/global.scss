@@ -1,0 +1,16 @@
+/* 
+ * Global CSS styles for the 40lovedrinks theme
+ */
+
+@use 'base/reset';
+@use 'base/typography';
+@use 'base/utilities';
+
+// Components
+@use 'components/button';
+@use 'components/form';
+
+/* Site Sections */
+@use 'sections/header';
+@use 'sections/footer';
+@use 'sections/newsletter';

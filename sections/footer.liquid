@@ -1,62 +1,119 @@
 <footer>
-  <div class="footer__copyright">
-    &copy;
-    {{ 'now' | date: '%Y' }}
-    {{ shop.name | link_to: routes.root_url }}, {{ powered_by_link }}
-  </div>
+    <div class="container">
+        <div class="footer">
+            <div class="footer__top">
+                <div class="footer__top--left">
+                    <div class="footer__top--logo">
+                        <a href="{{ routes.root_url }}">
+                            <img 
+                                src="{{ settings.footer_logo | image_url }}" 
+                                alt="{{ shop.name }}"
+                                width="197"
+                                height="160"
+                            >
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__top--right">
+                    <ul class="footer__top--menu">
+                    {% for link in settings.footer_menu.links %}
+                        <li class="nav-item">
+                            <a href="{{ link.url }}" class="nav-link">
+                                {{ link.title }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                    <div class="newsletter">
+                        <div class="newsletter__header text-white">
+                            <h4 class="site-title__md">{{ settings.header_text }}</h4>
+                            <p>{{ settings.header_desc }}</p>
+                        </div>
+                        <div class="newsletter__body">
+                            {% form 'customer', id: 'newsletter-form', class: 'form' %} 
+                                <input type="hidden" name="contact[tags]" value="newsletter">
 
-  <div class="footer__links">
-    {% for link in section.settings.menu.links %}
-      {{ link.title | link_to: link.url }}
-    {% endfor %}
-  </div>
-
-  <div class="footer__payment">
-    {% if section.settings.show_payment_icons %}
-      {% for type in shop.enabled_payment_types %}
-        {{ type | payment_type_svg_tag }}
-      {% endfor %}
-    {% endif %}
-  </div>
+                                <div class="form__group--inline">
+                                    <div class="form__control bordered-white">
+                                        <input type="email" name="contact[email]" placeholder="Email address" required>
+                                    </div>
+                                    <button type="submit" class="btn white">Subscribe</button>
+                                </div>
+                            
+                                {% if form.posted_successfully? %} 
+                                    <p class="newsletter-success">Thank you for subscribing!</p> 
+                                {% elsif form.errors %}
+                                    <p class="newsletter-error">{{ form.errors | default_errors }}</p> 
+                                {% endif %} 
+                            {% endform %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-between align-center footer__bottom">
+                <div class="footer__bottom--copyright text-white">
+                    <p>&copy; {{ 'now' | date: '%Y' }} 40-love. All rights reserved.</p>
+                </div>
+                <div class="flex align-center footer__bottom--payment-list">
+                    <div class="payment-icon">
+                        <img 
+                            src="{{ 'logo-gcash.png' | asset_url }}" 
+                            alt="GCash Logo"
+                            width=""
+                            height=""
+                        >
+                    </div>
+                    <div class="payment-icon">
+                        <img 
+                            src="{{ 'logo-maya.png' | asset_url }}" 
+                            alt="Maya Logo"
+                            width=""
+                            height=""
+                        >
+                    </div>
+                    <div class="payment-icon">
+                        <img 
+                            src="{{ 'logo-paypal.png' | asset_url }}" 
+                            alt="Paypal Logo"
+                            width=""
+                            height=""
+                        >
+                    </div>
+                    <div class="payment-icon">
+                        <img 
+                            src="{{ 'logo-mastercard.png' | asset_url }}" 
+                            alt="Master Card Logo"
+                            width=""
+                            height=""
+                        >
+                    </div>
+                    <div class="payment-icon">
+                        <img 
+                            src="{{ 'logo-visa.png' | asset_url }}" 
+                            alt="Visa Logo"
+                            width=""
+                            height=""
+                        >
+                    </div>
+                </div>
+                <div class="flex align-center footer__bottom--social">
+                    <a href="{{ settings.facebook_url }}" target="_blank" rel="noopener noreferrer">
+                        {{ 'icon-facebook.svg' | inline_asset_content }}
+                    </a>
+                    <a href="{{ settings.instagram_url }}" target="_blank" rel="noopener noreferrer">
+                        {{ 'icon-ig.svg' | inline_asset_content }}
+                    </a>
+                    <a href="{{ settings.youtube_link }}" target="_blank" rel="noopener noreferrer">
+                        {{ 'icon-youtube.svg' | inline_asset_content }}
+                    </a>
+                    <a href="{{ settings.tiktok_link }}" target="_blank" rel="noopener noreferrer">
+                        {{ 'icon-tiktok.svg' | inline_asset_content }}
+                    </a>
+                    <a href="{{ settings.twitter_url }}" target="_blank" rel="noopener noreferrer">
+                        {{ 'icon-x.svg' | inline_asset_content }}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </footer>
-
-{% stylesheet %}
-  footer {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 2rem;
-  }
-  footer a {
-    text-decoration: none;
-    color: var(--color-foreground);
-  }
-  footer .footer__links,
-  footer .footer__payment {
-    display: flex;
-    gap: 1rem;
-  }
-{% endstylesheet %}
-
-{% schema %}
-{
-    "name": "t:general.footer",
-    "settings": [
-      {
-        "type": "link_list",
-        "id": "footer_menu",
-        "label": "t:labels.menu"
-      },
-      {
-        "type": "image_picker",
-        "id": "footer_logo",
-        "label": "Footer Logo"
-      },
-      {
-        "type": "checkbox",
-        "id": "show_payment_icons",
-        "label": "t:labels.show_payment_icons",
-        "default": true
-      }
-    ]
-}
-{% endschema %}

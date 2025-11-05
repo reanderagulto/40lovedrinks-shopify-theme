@@ -1,0 +1,54 @@
+// Paragraph base styles
+p {
+	margin: 0;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: normal;
+    color: inherit;
+}
+
+// Site Title Variants
+.site-title {
+	&__xxl {
+		font-size: 3.5rem;
+		font-weight: 800;
+		line-height: 1.4;
+	}
+
+	&__xl {
+		font-size: 2.5rem;
+		font-weight: 800;
+		line-height: 1.4;
+	}
+
+	&__lg {
+		font-size: 1.875rem;
+		font-weight: 700;
+		line-height: 1.4;
+	}
+
+	&__md {
+		font-size: 1.5rem;
+		font-weight: 600;
+		line-height: normal;
+	}
+}
+
+// Text Utilities
+.text {
+	&-uppercase { text-transform: uppercase; }
+	&-italic { font-style: italic; }
+	&-normal { font-style: normal; }
+	&-hidden { font-size: 0; }
+	&-bold { font-weight: 700; }
+    &-normal { font-weight: 400 }
+
+    // Alignments
+    &-center { text-align: center; }
+    &-right { text-align: right; }
+    &-left { text-align: left; }
+
+	// Colors
+	&-white { color: var(--color-secondary); }
+	&-black { color: vaR(--color-primary); }
+}
