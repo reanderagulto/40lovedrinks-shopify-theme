@@ -1,0 +1,74 @@
+// Flex Utilities
+.flex {
+	display: flex;
+
+	&-col { flex-direction: column; }
+	&-row { flex-direction: row; }
+	&-row-reverse { flex-direction: row-reverse; }
+	&-col-reverse { flex-direction: column-reverse; }
+	&-wrap { flex-wrap: wrap; }
+
+	// Combined flex-flow shortcuts
+	&-row-wrap { flex-flow: row wrap; }
+	&-row-nowrap { flex-flow: row nowrap; }
+	&-col-nowrap { flex-flow: column nowrap; }
+	&-reverse-wrap { flex-flow: row-reverse wrap; }
+}
+
+// Display Utilities
+.d {
+	&-none { display: none; }
+	&-block { display: block; }
+	&-inline { display: inline; }
+}
+
+// Width Utilities
+.w {
+	&-full { width: 100%; }
+	&-max-content {
+		width: -moz-max-content;
+		width: max-content;
+	}
+	&-min-content {
+		width: -moz-min-content;
+		width: min-content;
+	}
+}
+
+// Justify Content Utilities
+.justify {
+	&-start { justify-content: flex-start; }
+	&-end { justify-content: flex-end; }
+	&-center { justify-content: center; }
+	&-between { justify-content: space-between; }
+}
+
+// Align Items Utilities
+.align {
+	&-center { align-items: center; }
+	&-start { align-items: flex-start; }
+	&-end { align-items: flex-end; }
+	&-stretch { align-items: stretch; }
+}
+
+// Position Utilities
+.position {
+	&-relative { position: relative; }
+	&-absolute { position: absolute; }
+}
+
+// Container Utilities
+.container {
+	width: 100%;
+	margin-inline: auto;
+
+	&-full {
+		width: 100%;
+		max-width: 100%;
+		margin-inline: auto;
+	}
+
+	// Default container max width
+	max-width: 1240px;
+}
+
