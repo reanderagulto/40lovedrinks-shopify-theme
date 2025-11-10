@@ -1,0 +1,24 @@
+/** Breakpoints **/
+.homepage__banner {
+  width: 100%;
+}
+.homepage__banner--inner-wrapper {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+.homepage__banner--text-content {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+}
+.homepage__banner--text-content > * {
+  color: inherit;
+}
+@media screen and (min-width: 541px) {
+  .homepage__banner--inner-wrapper {
+    flex-direction: column;
+  }
+  .homepage__banner--text-content {
+    padding: 24px 0 24px 55px;
+  }
+}

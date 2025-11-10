@@ -1,0 +1,19 @@
+.payment-list {
+    gap: 8px;
+    
+    .payment-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 48.448px;
+        height: 24.224px;
+        padding: 0 7px;
+        background-color: var(--color-secondary);
+
+        img {
+            width: auto;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}
