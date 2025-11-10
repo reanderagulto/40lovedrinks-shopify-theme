@@ -2,7 +2,7 @@
     <div class="container">
         <div class="footer">
             <div class="footer__top">
-                <div class="footer__top--left">
+                <div class="footer__top--left hidden-in-md hidden-in-sm">
                     <div class="footer__top--logo">
                         <a href="{{ routes.root_url }}">
                             <img 
@@ -54,49 +54,10 @@
                 <div class="footer__bottom--copyright text-white">
                     <p>&copy; {{ 'now' | date: '%Y' }} 40-love. All rights reserved.</p>
                 </div>
-                <div class="flex align-center footer__bottom--payment-list">
-                    <div class="payment-icon">
-                        <img 
-                            src="{{ 'logo-gcash.png' | asset_url }}" 
-                            alt="GCash Logo"
-                            width=""
-                            height=""
-                        >
-                    </div>
-                    <div class="payment-icon">
-                        <img 
-                            src="{{ 'logo-maya.png' | asset_url }}" 
-                            alt="Maya Logo"
-                            width=""
-                            height=""
-                        >
-                    </div>
-                    <div class="payment-icon">
-                        <img 
-                            src="{{ 'logo-paypal.png' | asset_url }}" 
-                            alt="Paypal Logo"
-                            width=""
-                            height=""
-                        >
-                    </div>
-                    <div class="payment-icon">
-                        <img 
-                            src="{{ 'logo-mastercard.png' | asset_url }}" 
-                            alt="Master Card Logo"
-                            width=""
-                            height=""
-                        >
-                    </div>
-                    <div class="payment-icon">
-                        <img 
-                            src="{{ 'logo-visa.png' | asset_url }}" 
-                            alt="Visa Logo"
-                            width=""
-                            height=""
-                        >
-                    </div>
-                </div>
-                <div class="flex align-center footer__bottom--social">
+                
+                {% render 'global-payment-methods' %} 
+
+                <div class="flex align-center footer__bottom--social hidden-in-md hidden-in-sm">
                     <a href="{{ settings.facebook_url }}" target="_blank" rel="noopener noreferrer">
                         {{ 'icon-facebook.svg' | inline_asset_content }}
                     </a>

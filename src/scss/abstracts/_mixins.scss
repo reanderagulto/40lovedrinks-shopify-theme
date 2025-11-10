@@ -1,0 +1,8 @@
+@use "sass:map";
+@use "variables" as *;
+
+@mixin font-assign($size: 1rem, $weight: 400, $line-height: normal) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $line-height;
+}

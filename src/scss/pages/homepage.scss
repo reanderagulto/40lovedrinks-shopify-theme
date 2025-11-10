@@ -1,0 +1,81 @@
+@use '../abstracts/' as abstracts;
+
+.homepage {
+    &__banner {
+        width: 100%;
+
+        &--inner-wrapper {
+            display: flex;
+            align-items: stretch;
+            flex-wrap: wrap;
+        }
+
+        &--text-content {
+            background-color: var(--color-primary);
+            color: var(--color-secondary);
+            width: 100%;
+            padding: 40px 24px;
+
+            & > * {
+                color: inherit;
+            }
+        }
+
+        &--inner-text {
+            max-width: 100%;
+            width: 100%;
+            
+            .site-title__xl {
+                margin-bottom: 1rem;
+            }
+
+            .payment-list {
+                margin-top: 1.5rem;
+                gap: 24px;
+            }
+
+            .payment-icon {
+                width: 80px;
+                height: 40px;
+            }
+        }
+
+        &--image {
+            width: 100%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: top center;
+            }
+        }
+    }
+
+    @include abstracts.media-min(md) {        
+        &__banner {
+            &--inner-wrapper {
+                align-items: stretch;
+                flex-direction: row;
+            }
+
+            &--text-content {
+                padding: 1.667vw 0 1.667vw 6.944vw;
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            &--inner-text {
+                padding: 3.889vw 2.778vw 3.889vw 0;
+                width: 33.681vw;
+            }
+
+            &--image {
+                width: 50%;
+                height: 600px;
+            }
+        }
+    }
+}
