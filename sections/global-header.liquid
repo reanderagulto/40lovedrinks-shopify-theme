@@ -15,7 +15,10 @@
                         {% assign is_active = true %}
                     {% endif %}
 
-                    <a href="{{ link.url }}" class="nav-link{% if is_active %} active{% endif %}">
+                    <a 
+                        href="{{ link.url }}" 
+                        class="nav-link{% if is_active %} active{% endif %}"
+                    >
                         {{ link.title }}
                     </a>
                 {% endfor %}

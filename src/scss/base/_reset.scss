@@ -92,3 +92,10 @@ body {
 .shopify-section {
   width: 100%;
 }
+
+.row {
+    &::after, 
+    &::before {
+        display: none;
+    }
+}

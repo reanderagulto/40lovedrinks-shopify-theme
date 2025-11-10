@@ -1,3 +1,6 @@
+@use 'sass:map';
+@use '../abstracts/' as abstracts;
+
 // Flex Utilities
 .flex {
 	display: flex;
@@ -57,18 +60,55 @@
 	&-absolute { position: absolute; }
 }
 
-// Container Utilities
-.container {
-	width: 100%;
-	margin-inline: auto;
+.hidden {
+    display: none !important;
 
-	&-full {
-		width: 100%;
-		max-width: 100%;
-		margin-inline: auto;
-	}
+    &-in-xl {
+        @include abstracts.media-min(lg) {
+            display: none !important;
+        }
+    }
+    
+    &-in-lg {
+        @include abstracts.media-min-max(md, lg) {
+            display: none !important;
+        }
+    }
 
-	// Default container max width
-	max-width: 1240px;
+    &-in-md {
+        @include abstracts.media-min-max(sm, md) {
+            display: none !important;
+        }
+    }
+
+    &-in-sm {
+        @include abstracts.media-max(sm) {
+            display: none;
+        }
+    }
 }
 
+
+
+// Container Utilities
+/* Container */
+.container {
+    width: 100%; 
+    max-width: 100%;
+    margin-inline: auto;
+    padding-inline: map.get(abstracts.$padding, sm);
+
+    &::after, 
+    &::before {
+        display: none;
+    }
+
+    @include abstracts.media-min(md) {
+        padding-inline: map.get(abstracts.$padding, md);
+        max-width: map.get(abstracts.$containers, lg);
+    }
+
+    @include abstracts.media-min(lg) {
+        padding-inline: 0;
+    }
+}

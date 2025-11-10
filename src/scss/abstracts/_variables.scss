@@ -1,0 +1,18 @@
+/** Breakpoints **/
+$breakpoints: (
+  'xsm': 320px,
+  'sm': 540px,
+  'md': 991px,
+  'lg': 1199px,
+  'xl': 1336px,
+  'xxl': 1440px
+) !default;
+
+$containers: (
+    'lg': 86.111vw
+) !default;
+
+$padding: (
+    'sm': 24px,
+    'md': 32px
+) !default;
