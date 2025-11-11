@@ -11,7 +11,14 @@
   "sections": {
     "main": {
       "type": "pages-home-index",
-      "settings": {}
+      "settings": {
+        "banner_title": "Pure Hydration, <br>Powered by Collagen<br> And Electrolytes",
+        "banner_description": "<p>Crave for fast hydration with collagen-infused drinks. </p>",
+        "banner_image": "shopify://shop_images/home-banner.webp",
+        "banner_show_payments": true,
+        "banner_review_writeup_1": "4.9-stars from 1,500+ Reviews",
+        "banner_review_writeup_2": "15,000+ Athletes hydrated"
+      }
     }
   },
   "order": [
