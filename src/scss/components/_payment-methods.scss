@@ -1,5 +1,6 @@
 .payment-list {
     gap: 8px;
+    flex-wrap: wrap;
     
     .payment-icon {
         display: flex;
@@ -9,6 +10,7 @@
         height: 24.224px;
         padding: 0 7px;
         background-color: var(--color-secondary);
+        flex-shrink: 0;
 
         img {
             width: auto;

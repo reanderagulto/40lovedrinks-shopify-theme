@@ -341,6 +341,7 @@ p {
 
 .payment-list {
   gap: 8px;
+  flex-wrap: wrap;
 }
 .payment-list .payment-icon {
   display: flex;
@@ -350,12 +351,49 @@ p {
   height: 24.224px;
   padding: 0 7px;
   background-color: var(--color-secondary);
+  flex-shrink: 0;
 }
 .payment-list .payment-icon img {
   width: auto;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.review-ratings {
+  margin: 1rem 0 0.5rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.review-ratings__list {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-right: 8px;
+}
+.review-ratings__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 17.143px;
+  height: 17.143px;
+  flex-shrink: 0;
+}
+.review-ratings__item svg {
+  width: 17.143px;
+  height: 17.143px;
+  flex-shrink: 0;
+}
+.review-ratings__item svg path {
+  fill: var(--color-secondary);
+}
+.review-ratings__text-content {
+  flex-grow: 1;
+}
+.review-ratings__text-content:last-of-type {
+  width: 100%;
 }
 
 /* Site Sections */
@@ -541,6 +579,18 @@ footer {
   .container {
     padding-inline: 32px;
     max-width: 86.111vw;
+  }
+  .review-ratings__item {
+    background: rgba(255, 248, 220, 0.5);
+    width: 22px;
+    height: 22px;
+  }
+  .review-ratings__item svg {
+    width: 14px;
+    height: 14px;
+  }
+  .review-ratings__item svg path {
+    fill: #FCD116;
   }
   footer {
     padding: 80px 0;
