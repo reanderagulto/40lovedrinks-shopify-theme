@@ -1,0 +1,60 @@
+@use '../abstracts/' as abstracts;
+
+.review-ratings {
+    margin: 1rem 0 0.5rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-right: 8px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 17.143px;
+        height: 17.143px;
+        flex-shrink: 0;
+
+        svg {
+            width: 17.143px;
+            height: 17.143px;
+            flex-shrink: 0;
+            
+            path {
+                fill: var(--color-secondary);
+            }
+        }
+    }
+
+    &__text-content {
+        flex-grow: 1;
+        
+        &:last-of-type {
+            width: 100%;
+        }
+    }
+
+    @include abstracts.media-min(md) {
+        &__item {
+            background: rgba(255, 248, 220, 0.50);
+            width: 22px;
+            height: 22px;
+
+            svg {
+                width: 14px;
+                height: 14px;
+
+                path {
+                    fill: #FCD116;
+                }
+            }
+        }
+    }
+}

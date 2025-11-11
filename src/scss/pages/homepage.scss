@@ -8,6 +8,10 @@
             display: flex;
             align-items: stretch;
             flex-wrap: wrap;
+
+            .btn {
+                display: none;
+            }
         }
 
         &--text-content {
@@ -42,12 +46,22 @@
 
         &--image {
             width: 100%;
+            height: 300px;
 
             img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
                 object-position: top center;
+            }
+        }
+    }
+
+    @include abstracts.media-min(sm) {
+        &__banner--inner-wrapper {
+            .btn {
+                display: flex;
+                margin-top: 40px;
             }
         }
     }
@@ -68,13 +82,13 @@
             }
 
             &--inner-text {
-                padding: 3.889vw 2.778vw 3.889vw 0;
+                padding: 56px 2.778vw 0 0;
                 width: 33.681vw;
             }
 
             &--image {
                 width: 50%;
-                height: 600px;
+                height: auto;
             }
         }
     }
