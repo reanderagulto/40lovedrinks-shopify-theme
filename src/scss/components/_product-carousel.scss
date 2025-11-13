@@ -1,0 +1,66 @@
+@use '../abstracts/' as abstracts;
+
+.product-slider {   
+    &__inner-wrapper {
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+
+    &__list {
+        gap: 24px
+    }
+
+    &__item {
+        width: 100%;
+        margin-inline: auto;
+        border: 1px solid var(--color-primary);
+        background-color: #F7F7F7;
+        border-radius: 24px;
+        overflow: hidden;
+
+        &--content {
+            padding: 24px 32px 40px;
+            height: 100%;
+
+            .btn {
+                margin-top: auto;
+            }
+        }
+
+        &--desc {
+            margin: 8px 0 24px;
+            color: #717171;
+            @include abstracts.font-assign(12px, 400, normal);
+
+            & > * {
+                color: inherit;
+                @include abstracts.font-assign(inherit, inherit, inherit);
+            }
+        }
+    }
+
+    @include abstracts.media-min(sm) {
+        &__item {
+            background-color: #F7F7F7;
+            border-radius: 0;
+            width: calc(calc(100% / 3) - 40px);
+            flex-grow: 1;
+            margin-inline: 0;
+
+            &--content {
+                padding-inline: 40px;
+            }
+        }
+    }
+
+    @include abstracts.media-min(md) {
+        &__inner-wrapper {
+            padding-top: 64px;
+            padding-bottom: 64px;
+        }
+
+        &__list {
+            gap: 40px;
+        }
+    }
+}

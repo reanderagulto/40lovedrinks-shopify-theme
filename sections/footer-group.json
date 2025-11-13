@@ -13,11 +13,7 @@
   "sections": {
     "footer": {
       "type": "global-footer",
-      "settings": {
-        "footer_menu": "footer",
-        "footer_logo": "shopify://shop_images/40lovedrinks-logo-large.png",
-        "show_payment_icons": true
-      }
+      "settings": {}
     }
   },
   "order": [

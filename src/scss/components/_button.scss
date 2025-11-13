@@ -32,6 +32,11 @@
         }
     }
 
+    &.full {
+        width: auto;
+        text-align: center;
+    }
+
     @include abstracts.media-min(sm) {
         border-radius: 0;
     }
