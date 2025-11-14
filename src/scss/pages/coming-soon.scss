@@ -1,0 +1,100 @@
+@use '../abstracts/' as abstracts;
+
+.coming-soon {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 128px;
+
+    .site-title__xl {
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: -0.9px;
+        text-transform: capitalize;
+    }
+
+    &__inner-wrapper {
+        max-width: 640px;
+        width: 100%;
+        margin-inline: auto;
+    }
+
+    &__banner {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        border-radius: 16px;
+        border: 2px solid var(--color-primary);
+        background: #F2F2F2;
+
+        &--image {
+            position: relative;
+            width: 215px;
+            height: 215px;
+            margin-inline: auto;
+            z-index: 50;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            background: linear-gradient(270deg, #AFAFAF 1.46%, #FFF 26.46%, #FFF 69.14%, #AFAFAF 97.89%);
+            height: 151px;
+            top: 0;
+            width: 100%;
+            z-index: 20;
+        }
+
+        &--title {
+            margin: 24px 0 8px;
+        }
+
+        &--form {
+            margin-top: 24px;
+
+            #newsletter-form {
+                width: 100%;                
+            }
+
+            .btn {
+                margin-top: 24px;
+                width: auto;
+                border-radius: 1000px;
+                flex-grow: 1;
+            }
+
+            .form__control {
+                border-radius: 8px;
+            }
+        }
+
+        .form__submit {
+            width: 100%;
+        }
+
+        &--disclaimer {
+            margin-top: 24px;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+
+    @include abstracts.media-min(sm) {
+        margin-top: 152px;
+
+        &__banner {
+            &--image {
+                width: 430px;
+                height: 430px;
+            }
+
+            &::before {
+                height: 302px;
+            }
+        }
+    }
+}
