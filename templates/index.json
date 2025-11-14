@@ -8,14 +8,18 @@
  * ------------------------------------------------------------
  */
 {
-    "layout": "coming-soon",
-    "sections": {
-        "main": {
-            "type": "pages-coming-soon-index",
-            "settings": {}
-        }
-    },
-    "order": [
-        "main"
-    ]
+  "layout": "coming-soon",
+  "sections": {
+    "main": {
+      "type": "pages-coming-soon-index",
+      "settings": {
+        "banner_image": "shopify://shop_images/coming-soon-banner.png",
+        "banner_title": "Hydration that keeps up with you. Powered by collagen and electrolytes.",
+        "banner_desc": "<p>Get early access to 40-LOVE — designed for movement, clarity, and recovery.</p>"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
 }
