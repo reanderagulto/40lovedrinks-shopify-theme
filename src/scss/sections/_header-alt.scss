@@ -1,0 +1,18 @@
+@use '../abstracts/' as abstracts;
+
+.header-alt {
+    height: 7rem;
+    padding: 16px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 60;
+    background-color: var(--color-secondary);
+
+    &__inner-wrapper {
+        display: flex;
+        align-items: center;
+        // justify-content: space-between;
+        justify-content: center;
+    }
+}

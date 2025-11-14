@@ -8,15 +8,15 @@
  * ------------------------------------------------------------
  */
 {
-  "type": "footer",
-  "name": "t:general.footer",
-  "sections": {
-    "footer": {
-      "type": "global-footer",
-      "settings": {}
-    }
-  },
-  "order": [
-    "footer"
-  ]
+    "type": "footer",
+    "name": "t:general.footer",
+    "sections": {
+        "footer": {
+            "type": "global-footer",
+            "settings": {}
+        }
+    },
+    "order": [
+        "footer"
+    ]
 }
