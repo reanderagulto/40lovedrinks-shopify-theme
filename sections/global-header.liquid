@@ -8,20 +8,25 @@
     <div class="container">
         <div class="header__inner-wrapper">
             <div class="header__menu">
-                {% for link in settings.menu.links %}
-                    {% assign is_active = false %}
+                <div class="header__menu--desktop">
+                    {% for link in settings.menu.links %}
+                        {% assign is_active = false %}
 
-                    {% if link.url == request.path or link.url == request.page_handle %}
-                        {% assign is_active = true %}
-                    {% endif %}
+                        {% if link.url == request.path or link.url == request.page_handle %}
+                            {% assign is_active = true %}
+                        {% endif %}
 
-                    <a 
-                        href="{{ link.url }}" 
-                        class="nav-link{% if is_active %} active{% endif %}"
-                    >
-                        {{ link.title }}
-                    </a>
-                {% endfor %}
+                        <a 
+                            href="{{ link.url }}" 
+                            class="nav-link{% if is_active %} active{% endif %}"
+                        >
+                            {{ link.title }}
+                        </a>
+                    {% endfor %}
+                </div>
+                <div class="header__hamburger">
+                    {{ 'icon-hamburger.svg' | inline_asset_content }}
+                </div>
             </div>
 
             <div class="header__logo">
