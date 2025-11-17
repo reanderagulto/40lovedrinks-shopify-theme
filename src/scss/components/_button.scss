@@ -17,6 +17,7 @@
     background-color: var(--color-primary);
     color: var(--color-secondary);
     border-radius: 1000px;
+    text-align: center;
 
     &:hover {
         background: #333333;
@@ -61,5 +62,9 @@
         width: 40px;
         height: 40px;
         padding: 0;
+    }
+
+    &.boxed {
+        border-radius: 0;
     }
 }

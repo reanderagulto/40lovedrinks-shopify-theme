@@ -1,4 +1,6 @@
 // Paragraph base styles
+@use '../abstracts/' as abstracts;
+
 p {
 	margin: 0;
 	font-size: 1rem;
@@ -9,29 +11,50 @@ p {
 
 // Site Title Variants
 .site-title {
-	&__xxl {
-		font-size: 3.5rem;
-		font-weight: 800;
-		line-height: 1.4;
-	}
+    &__xxl {
+        font-size: 1.875rem;
+        font-weight: 800;
+        line-height: 1.4;
+    }
 
-	&__xl {
-		font-size: 2.5rem;
-		font-weight: 800;
-		line-height: 1.4;
-	}
+    &__xl {
+        font-size: 2rem;
+        font-weight: 800;
+        line-height: 1.2;
+    }
 
-	&__lg {
-		font-size: 30px;
-		font-weight: 700;
-		line-height: 1.4;
-	}
+    &__lg {
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 1.2;
+    }
 
-	&__md {
-		font-size: 1.5rem;
-		font-weight: 600;
-		line-height: normal;
-	}
+    &__md {
+        font-size: 1.125rem;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    @include abstracts.media-min(md){
+        &__xxl {
+            font-size: 3.5rem;
+            line-height: 1.4;
+        }
+
+        &__xl {
+            font-size: 2.5rem;
+            line-height: 1.4;
+        }
+
+        &__lg {
+            font-size: 30px;
+            line-height: 1.4;
+        }
+
+        &__md {
+            font-size: 1.5rem;
+        }
+    }
 }
 
 // Text Utilities
