@@ -1,0 +1,47 @@
+<section class="homepage__hero">
+    <div class="container homepage__hero--inner-wrapper">
+        div
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Hero Section", 
+    "settings": [
+        {
+            "type": "text", 
+            "id": "hero_title",
+            "label": "Hero Section Title",
+            "default": "Fuel Your Day, The Hydrated Way"
+        }, 
+        {
+            "type": "richtext", 
+            "id": "hero_description", 
+            "label": "Hero Section Description",
+            "default": "<p>Hydration that complements your busy lifestyle and self-care goals.</p>"
+        }, 
+        {
+            "type": "text", 
+            "id": "hero_button_label", 
+            "label": "Hero Section Button Label", 
+            "default": "Shop All Flavors"
+        },
+        {
+            "type": "text", 
+            "id": "hero_button_link", 
+            "label": "Hero Section Button Link",
+            "default": "#"
+        },
+        {
+            "type": "image_picker", 
+            "id": "hero_image",
+            "label": "Hero Image"
+        },
+        {
+            "type": "image_picker", 
+            "id": "hero_background", 
+            "label": "Hero Background"
+        }
+    ]
+}
+{% endschema %}

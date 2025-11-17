@@ -27,10 +27,36 @@
                 "slider_collection": "product-slider",
                 "product_limit": 3
             }
+        }, 
+        "cta-section": {
+            "type": "pages-home-cta-section",
+            "settings": {
+                "cta_1_title": "Refresh, Replenish, and Radiate",
+                "cta_1_description": "<p>At 40-LOVE, we believe staying active and looking your best is a match worth playing for.</p>",
+                "cta_1_button_label": "Shop All Flavors",
+                "cta_1_button_link": "#",
+                "cta_2_title": "The Benefits of Collagen and Electrolytes Drink",
+                "cta_2_description": "<p>Hydration powers energy, focus, and performance, but water alone won't cut it. You need electrolytes to regulate fluid balance and maximize absorption.</p>",
+                "cta_2_button_label": "Learn More",
+                "cta_2_button_link": "#"
+            }
+        }, 
+        "hero-section": {
+            "type": "pages-home-hero-section", 
+            "settings": {
+                "hero_title": "Fuel Your Day, The Hydrated Way", 
+                "hero_description": "<p>Hydration that complements your busy lifestyle and self-care goals.</p>",
+                "hero_button_label": "Hero Section Button Label",
+                "hero_button_link": "#",
+                "hero_image": "shopify://shop_images/hero-image.webp",
+                "hero_background": "shopify://shop_images/hero-background.webp",
+            }
         }
     },
     "order": [
         "banner",
-        "product-slider"
+        "product-slider",
+        "cta-section", 
+        "hero-section"
     ]
 }
