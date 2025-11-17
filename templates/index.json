@@ -46,17 +46,28 @@
             "settings": {
                 "hero_title": "Fuel Your Day, The Hydrated Way", 
                 "hero_description": "<p>Hydration that complements your busy lifestyle and self-care goals.</p>",
-                "hero_button_label": "Hero Section Button Label",
+                "hero_button_label": "Shop All Flavors",
                 "hero_button_link": "#",
                 "hero_image": "shopify://shop_images/hero-image.webp",
                 "hero_background": "shopify://shop_images/hero-background.webp",
             }
-        }
+        }, 
+        // "subscription-highlight": {
+        //     "type": "components-subscription-highlight", 
+        //     "settings": {
+        //         "subscription_title": "Save 25% with Endless 40-LOVE", 
+        //         "subscription_desc": "<p>Never run out of your favorite flavors when you join our fam. Subscribe and save on every order — your wallet (and digestion) will thank you.</p>",
+        //         "subscription_image": "shopify://shop_images/subscription-highlight.webp",
+        //         "subscription_button_label": "Subscribe & Save",
+        //         "subscription_button_link": "#"
+        //     }
+        // }
     },
     "order": [
         "banner",
         "product-slider",
         "cta-section", 
-        "hero-section"
+        "hero-section",
+        // "subscription-highlight"
     ]
 }

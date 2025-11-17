@@ -99,6 +99,7 @@ body {
   display: none;
 }
 
+/** Breakpoints **/
 p {
   margin: 0;
   font-size: 1rem;
@@ -108,22 +109,22 @@ p {
 }
 
 .site-title__xxl {
-  font-size: 3.5rem;
+  font-size: 1.875rem;
   font-weight: 800;
   line-height: 1.4;
 }
 .site-title__xl {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 800;
-  line-height: 1.4;
+  line-height: 1.2;
 }
 .site-title__lg {
-  font-size: 30px;
+  font-size: 1.5rem;
   font-weight: 700;
-  line-height: 1.4;
+  line-height: 1.2;
 }
 .site-title__md {
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   font-weight: 600;
   line-height: normal;
 }
@@ -162,7 +163,6 @@ p {
   color: vaR(--color-primary);
 }
 
-/** Breakpoints **/
 .flex {
   display: flex;
 }
@@ -490,6 +490,55 @@ p {
   margin-right: 16px;
 }
 
+.subscription-highlight {
+  padding: 24px;
+}
+.subscription-highlight__inner-wrapper {
+  position: initial;
+  border: 1px solid var(--color-primary);
+  display: flex;
+  flex-direction: column;
+}
+.subscription-highlight__inner-wrapper::before {
+  content: "";
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(270deg, rgba(0, 0, 0, 0) 20.76%, #000 57.72%);
+  z-index: 15;
+}
+.subscription-highlight__text-wrapper {
+  position: relative;
+  z-index: 20;
+  padding-top: 24px;
+  padding-bottom: 40px;
+}
+.subscription-highlight__background {
+  position: initial;
+  height: 220px;
+  width: 100%;
+}
+.subscription-highlight__text-content {
+  width: 100%;
+  color: var(--color-primary);
+}
+.subscription-highlight__text-content .site-title__xxl {
+  margin-bottom: 16px;
+}
+.subscription-highlight__text-content .btn {
+  margin-top: 24px;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+}
+.subscription-highlight__text-content > * {
+  color: inherit;
+}
+
 /* Site Sections */
 header {
   height: 7rem;
@@ -683,6 +732,21 @@ footer {
   }
 }
 @media screen and (min-width: 992px) {
+  .site-title__xxl {
+    font-size: 3.5rem;
+    line-height: 1.4;
+  }
+  .site-title__xl {
+    font-size: 2.5rem;
+    line-height: 1.4;
+  }
+  .site-title__lg {
+    font-size: 30px;
+    line-height: 1.4;
+  }
+  .site-title__md {
+    font-size: 1.5rem;
+  }
   .container {
     padding-inline: 32px;
     max-width: 86.111vw;
@@ -709,6 +773,42 @@ footer {
   }
   .product-slider__item--image {
     width: max(22.083vw, 318px);
+  }
+  .subscription-highlight {
+    padding: 0;
+  }
+  .subscription-highlight__text-wrapper {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .subscription-highlight__inner-wrapper {
+    padding: 121px 0;
+    position: relative;
+    border: 0;
+  }
+  .subscription-highlight__inner-wrapper::before {
+    display: block;
+  }
+  .subscription-highlight__background {
+    content: "";
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+  }
+  .subscription-highlight__text-content {
+    max-width: 565px;
+    color: var(--color-secondary);
+  }
+  .subscription-highlight__text-content .btn {
+    margin-top: 40px;
   }
   .header__menu--desktop {
     display: flex;
