@@ -21,6 +21,10 @@
     &:hover {
         background: #333333;
         color: var(--color-secondary);
+
+        svg path {
+            fill: var(--color-secondary);
+        }
     }
 
     &.white {
@@ -37,7 +41,25 @@
         text-align: center;
     }
 
-    @include abstracts.media-min(sm) {
-        border-radius: 0;
+    &.bordered-black {
+        border: 1px solid #1B1B1B;
+    }
+
+    &.transparent {
+        background: transparent;
+
+        &:hover {
+            background-color: var(--color-primary);
+
+            svg path {
+                fill: var(--color-secondary);
+            }
+        }
+    }
+
+    &.circle {
+        width: 40px;
+        height: 40px;
+        padding: 0;
     }
 }

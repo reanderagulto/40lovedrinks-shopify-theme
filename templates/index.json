@@ -8,18 +8,29 @@
  * ------------------------------------------------------------
  */
 {
-  "layout": "coming-soon",
-  "sections": {
-    "main": {
-      "type": "pages-coming-soon-index",
-      "settings": {
-        "banner_image": "shopify://shop_images/coming-soon-banner.png",
-        "banner_title": "Hydration that keeps up with you. Powered by collagen and electrolytes.",
-        "banner_desc": "<p>Get early access to 40-LOVE — designed for movement, clarity, and recovery.</p>"
-      }
-    }
-  },
-  "order": [
-    "main"
-  ]
+    "layout": "homepage",
+    "sections": {
+        "banner": {
+            "type": "pages-home-banner",
+            "settings": {
+                "banner_title": "Pure Hydration, <br>Powered by Collagen<br> And Electrolytes",
+                "banner_description": "<p>Crave for fast hydration with collagen-infused drinks. </p>",
+                "banner_image": "shopify://shop_images/home-banner.webp",
+                "banner_show_payments": true,
+                "banner_review_writeup_1": "4.9-stars from 1,500+ Reviews",
+                "banner_review_writeup_2": "15,000+ Athletes hydrated"
+            }
+        },
+        "product-slider": {
+            "type": "pages-home-product-slider",
+            "settings": {
+                "slider_collection": "product-slider",
+                "product_limit": 3
+            }
+        }
+    },
+    "order": [
+        "banner",
+        "product-slider"
+    ]
 }
