@@ -1,0 +1,92 @@
+@use '../abstracts/' as abstracts;
+
+.formula {
+    padding: 24px;
+
+    &__inner-wrapper {
+        border: 1px solid var(--color-primary);
+        background-color: var(--color-secondary);
+        border-radius: 24px;
+        padding: 24px;
+    }
+
+    &__header {
+        margin-bottom: 24px;
+    }
+
+    &__list {
+        gap: 24px;
+    }
+
+    &__item {
+        width: calc(50% - 24px);
+
+        &--image {
+            margin-bottom: 24px;
+            margin-inline: 0;
+        }
+
+        h4 {
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 1.4;
+            text-transform: capitalize;
+            margin-bottom: 8px;
+            color: var(--color-primary);
+        }
+
+        p {
+            color: #616161;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+
+    &__desc {
+        color: #717171;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: 1rem;
+
+        & > * {
+            color: inherit;
+            font-size: inherit;
+            font-weight: inherit;
+            line-height: inherit;
+        }
+    }
+
+    @include abstracts.media-min(md) {
+        padding: 80px 0;
+
+        &__inner-wrapper {
+            border: 0;
+        }
+
+        &__list {
+            gap: 50px;
+        }
+
+        &__item {
+            width: calc(calc(100% / 3) - 50px);
+            padding: 24px;
+            border: 1px solid var(--color-primary);
+            align-items: center;
+            text-align: center;
+
+            &--image {
+                margin-inline: auto;
+            }
+
+            h4 {
+                font-size: 20px;
+            }
+        }
+
+        &__header {
+            text-align: center;
+        }
+    }
+}
