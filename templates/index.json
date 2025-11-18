@@ -52,22 +52,29 @@
                 "hero_background": "shopify://shop_images/hero-background.webp",
             }
         }, 
-        // "subscription-highlight": {
-        //     "type": "components-subscription-highlight", 
-        //     "settings": {
-        //         "subscription_title": "Save 25% with Endless 40-LOVE", 
-        //         "subscription_desc": "<p>Never run out of your favorite flavors when you join our fam. Subscribe and save on every order — your wallet (and digestion) will thank you.</p>",
-        //         "subscription_image": "shopify://shop_images/subscription-highlight.webp",
-        //         "subscription_button_label": "Subscribe & Save",
-        //         "subscription_button_link": "#"
-        //     }
-        // }
+        "subscription-highlight": {
+            "type": "components-subscription-highlight", 
+            "settings": {
+                "subscription_title": "Save 25% with Endless 40-LOVE", 
+                "subscription_desc": "<p>Never run out of your favorite flavors when you join our fam. Subscribe and save on every order — your wallet (and digestion) will thank you.</p>",
+                "subscription_button_label": "Subscribe & Save",
+                "subscription_button_link": "#"
+            }
+        }, 
+        "formula-highlight": {
+            "type": "components-formula-highlight", 
+            "settings": {
+                "formula_title": "The Ultimate Formula To Get Hydrated", 
+                "formula_desc": "<p>Get to know the ultimate formula for your daily needs</p>"
+            }
+        }
     },
     "order": [
         "banner",
         "product-slider",
         "cta-section", 
         "hero-section",
-        // "subscription-highlight"
+        "subscription-highlight",
+        "formula-highlight"
     ]
 }

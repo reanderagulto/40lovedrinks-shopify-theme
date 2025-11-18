@@ -11,7 +11,20 @@
                 </a>
             </div>
         </div>
-        <div class="position-absolute subscription-highlight__background" style="background-image: url({{ section.settings.subscription_image |  image_url }})"></div>
+        <div class="position-absolute subscription-highlight__background">
+            <video 
+                id="video-player" 
+                width="1440" 
+                height="600" 
+                playsinline
+                autoplay
+                loop
+                muted
+                preload="auto"
+            >
+                <source src="{{ 'subscription_video.mp4' | asset_url }}" type="video/mp4">
+            </video>
+        </div>
     </div>
 </section>
 
@@ -30,9 +43,9 @@
             "label": "Description"
         }, 
         {
-            "type": "image_picker",
-            "id": "subscription_image", 
-            "label": "Image"
+            "type": "video",
+            "id": "subscription_video", 
+            "label": "Video"
         }, 
         {
             "type": "text", 

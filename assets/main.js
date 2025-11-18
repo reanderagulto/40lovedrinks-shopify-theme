@@ -1,5 +1,5 @@
 (function(w, d) {
-  function productSlider() {
+  productSlider = () => {
     const slider = d.querySelector("#product-slider");
     if (slider) {
       const splideContainer = new Splide("#product-slider", {
@@ -33,8 +33,20 @@
         });
       });
     }
-  }
+  };
+  plyrIO = () => {
+    const videoPlayer = document.querySelector("#video-player");
+    if (videoPlayer) {
+      const player = new Plyr("#video-player", {
+        autoplay: true,
+        controls: [],
+        settings: ["loop"]
+      });
+      player.play();
+    }
+  };
   document.addEventListener("DOMContentLoaded", function() {
     productSlider();
+    plyrIO();
   });
 })(window, document);
