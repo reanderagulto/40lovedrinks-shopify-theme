@@ -1,0 +1,67 @@
+@use '../abstracts/' as abstracts; 
+
+.site-faq {
+    &__list {
+        padding: 16px 0;
+        max-width: 900px;
+        width: 100%;
+        margin-inline: auto;
+    }
+
+    &__title {
+        padding: 16px 0;
+        cursor: pointer;
+
+        h4 {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: normal;
+            color: var(--color-primary);
+        }
+
+        [data-id="minus"] {
+            display: none;
+        }
+
+        [data-id="plus"] {
+            display: block;
+        }
+
+        &.active {
+            [data-id="plus"] {
+                display: none;
+            }
+
+            [data-id="minus"] {
+                display: block;
+            }
+        }
+    }
+
+    &__content {
+        color: #717171;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: normal;
+        max-height: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: max-height 0.3s ease-in-out;
+
+        p {
+            margin: 16px 0;
+        }
+
+        &.active {
+            max-height: 500px;
+            opacity: 1;
+            visibility: visible;
+
+        }
+    }
+
+    &__icon {
+        flex-shrink: 0;
+        transition: all 0.3s ease;
+    }
+}

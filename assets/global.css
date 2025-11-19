@@ -845,6 +845,57 @@ footer {
 .newsletter__body {
   margin-top: 1.5rem;
 }
+
+.site-faq__list {
+  padding: 16px 0;
+  max-width: 900px;
+  width: 100%;
+  margin-inline: auto;
+}
+.site-faq__title {
+  padding: 16px 0;
+  cursor: pointer;
+}
+.site-faq__title h4 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--color-primary);
+}
+.site-faq__title [data-id=minus] {
+  display: none;
+}
+.site-faq__title [data-id=plus] {
+  display: block;
+}
+.site-faq__title.active [data-id=plus] {
+  display: none;
+}
+.site-faq__title.active [data-id=minus] {
+  display: block;
+}
+.site-faq__content {
+  color: #717171;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+.site-faq__content p {
+  margin: 16px 0;
+}
+.site-faq__content.active {
+  max-height: 500px;
+  opacity: 1;
+  visibility: visible;
+}
+.site-faq__icon {
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
 @media screen and (min-width: 321px) {
   .form__group--inline {
     flex-direction: row;
