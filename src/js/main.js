@@ -110,11 +110,29 @@
         }
     }
 
+    brandsSlider = () => {
+        const brandSlider = d.querySelector('#brands-slider');
+        if(brandSlider) {
+            const splideContainer = new Splide('#brands-slider', {
+                type: 'slide', 
+                perPage: 8, 
+                autoplay: false,
+                pagination: false,
+                arrows: false,
+                breakpoints: {
+                    991: { perPage: 4 }, 
+                    430: { perPage: 2 }
+                }
+            }).mount();
+        }
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
         productSlider();
         testimonials();
         plyrIO();
         siteFAQ();
+        brandsSlider();
     });
     
 })(window, document);

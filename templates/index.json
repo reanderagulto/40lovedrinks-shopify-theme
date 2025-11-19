@@ -177,6 +177,74 @@
                 "faq_question_5"
             ]
         },
+        "brand-section": {
+            "type": "pages-home-brand-section", 
+            "settings": {
+                "brand_title": "Premier Wellness Brands",
+                "brand_desc": "<p>Trusted 40-Loves Drinks</p>",
+                "brand_image": "shopify://shop_images/trusted-brand-images.webp",
+            },
+            "blocks": {
+                "brand_1": {
+                    "type": "brand",
+                    "settings": {
+                        "brand_logo": "shopify://shop_images/encore-logo.webp"
+                    }
+                },
+                "brand_2": {
+                    "type": "brand",
+                    "settings": {
+                        "brand_logo": "shopify://shop_images/base-logo.webp"
+                    }
+                },
+                "brand_3": {
+                    "type": "brand",
+                    "settings": {
+                        "brand_logo": "shopify://shop_images/bpc-logo.webp"
+                    }
+                },
+                "brand_4": {
+                    "type": "brand",
+                    "settings": {
+                        "brand_logo": "shopify://shop_images/iron-hive-logo.webp"
+                    }
+                },
+                "brand_5": {
+                    "type": "brand",
+                    "settings": {
+                        "brand_logo": "shopify://shop_images/rbsc-logo.webp"
+                    }
+                },
+                "brand_6": {
+                    "type": "brand",
+                    "settings": {
+                        "brand_logo": "shopify://shop_images/training-ground-logo.webp"
+                    }
+                },
+                "brand_7": {
+                    "type": "brand",
+                    "settings": {
+                        "brand_logo": "shopify://shop_images/on-track-logo.webp"
+                    }
+                },
+                "brand_8": {
+                    "type": "brand",
+                    "settings": {
+                        "brand_logo": "shopify://shop_images/unreal-gym-logo.webp"
+                    }
+                },
+            },
+            "block_order": [
+                "brand_1",
+                "brand_2",
+                "brand_3",
+                "brand_4",
+                "brand_5",
+                "brand_6",
+                "brand_7",
+                "brand_8"
+            ]
+        },
         "testimonial-section": {
             "type": "components-testimonials",
             "settings": {
@@ -246,6 +314,7 @@
         "subscription-highlight",
         "formula-highlight", 
         "faq-section",
-        "testimonial-section"
+        "brand-section",    
+        "testimonial-section",
     ]
 }
