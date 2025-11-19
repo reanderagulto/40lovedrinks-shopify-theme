@@ -48,7 +48,6 @@
   testimonials = () => {
     const slider = d.querySelector("#testimonials");
     if (slider) {
-      console.log("Testimonial Slider");
       const splideContainer = new Splide("#testimonials", {
         type: "loop",
         perPage: 6,
@@ -75,9 +74,31 @@
       });
     }
   };
+  siteFAQ = () => {
+    const faq = d.querySelector(".site-faq");
+    if (faq) {
+      const trigger = d.querySelectorAll(".site-faq__title");
+      trigger.forEach(function(title) {
+        title.addEventListener("click", function(e) {
+          const parent = title.closest(".site-faq__list");
+          const content = title.nextElementSibling;
+          if (!title.classList.contains("active")) {
+            parent.querySelectorAll(".site-faq__title.active").forEach((t) => t.classList.remove("active"));
+            parent.querySelectorAll(".site-faq__content.active").forEach((c) => c.classList.remove("active"));
+            title.classList.add("active");
+            content.classList.add("active");
+          } else {
+            title.classList.remove("active");
+            content.classList.remove("active");
+          }
+        });
+      });
+    }
+  };
   document.addEventListener("DOMContentLoaded", function() {
     productSlider();
     testimonials();
     plyrIO();
+    siteFAQ();
   });
 })(window, document);

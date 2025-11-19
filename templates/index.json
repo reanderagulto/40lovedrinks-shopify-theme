@@ -126,6 +126,57 @@
                 "key_ingredient_6"
             ]
         }, 
+        "faq-section": {
+            "type": "pages-home-faq-section",
+            "settings": {
+                "faq_title": "FAQ",
+                "faq_desc": "<p>If you don't see your question answered here, please don't hesitate to contact us or visit the extended FAQ section here.</p>"
+            },
+            "blocks": {
+                "faq_question_1": {
+                    "type": "faq_question",
+                    "settings": {
+                        "question": "What is 40-Loves Drinks?",
+                        "answer": "<p>40-Loves Drinks is a science-backed hydration mix designed to fuel performance and recovery. Each 10g sachet delivers a precise blend of electrolytes, especially sodium, plus real fruit flavors, to help you hydrate faster and perform at your best.</p><p>Whether you're training, traveling, or recovering from a long night, 40-Loves Drinks supports your body with what it needs to stay balanced, energized, and ready for more.</p>"
+                    }
+                },
+                "faq_question_2": {
+                    "type": "faq_question",
+                    "settings": {
+                        "question": "Can i drink 40-Loves Drinks even if i don't exercise?",
+                        "answer": "<p>40-Loves Drinks is a science-backed hydration mix designed to fuel performance and recovery. Each 10g sachet delivers a precise blend of electrolytes, especially sodium, plus real fruit flavors, to help you hydrate faster and perform at your best.</p><p>Whether you're training, traveling, or recovering from a long night, 40-Loves Drinks supports your body with what it needs to stay balanced, energized, and ready for more.</p>"
+                    }
+                },
+                "faq_question_3": {
+                    "type": "faq_question",
+                    "settings": {
+                        "question": "When should i drink 40-Loves Drinks?",
+                        "answer": "<p>40-Loves Drinks is a science-backed hydration mix designed to fuel performance and recovery. Each 10g sachet delivers a precise blend of electrolytes, especially sodium, plus real fruit flavors, to help you hydrate faster and perform at your best.</p><p>Whether you're training, traveling, or recovering from a long night, 40-Loves Drinks supports your body with what it needs to stay balanced, energized, and ready for more.</p>"
+                    }
+                },
+                "faq_question_4": {
+                    "type": "faq_question",
+                    "settings": {
+                        "question": "My doctor told me to cut down on salt, can I drink 40-Loves Drinks?",
+                        "answer": "<p>40-Loves Drinks is a science-backed hydration mix designed to fuel performance and recovery. Each 10g sachet delivers a precise blend of electrolytes, especially sodium, plus real fruit flavors, to help you hydrate faster and perform at your best.</p><p>Whether you're training, traveling, or recovering from a long night, 40-Loves Drinks supports your body with what it needs to stay balanced, energized, and ready for more.</p>"
+                    }
+                },
+                "faq_question_5": {
+                    "type": "faq_question",
+                    "settings": {
+                        "question": "How often can i drink 40-Loves Drinks?",
+                        "answer": "<p>40-Loves Drinks is a science-backed hydration mix designed to fuel performance and recovery. Each 10g sachet delivers a precise blend of electrolytes, especially sodium, plus real fruit flavors, to help you hydrate faster and perform at your best.</p><p>Whether you're training, traveling, or recovering from a long night, 40-Loves Drinks supports your body with what it needs to stay balanced, energized, and ready for more.</p>"
+                    }
+                }
+            },
+            "block_order": [
+                "faq_question_1",
+                "faq_question_2",
+                "faq_question_3",
+                "faq_question_4",
+                "faq_question_5"
+            ]
+        },
         "testimonial-section": {
             "type": "components-testimonials",
             "settings": {
@@ -194,6 +245,7 @@
         "hero-section",
         "subscription-highlight",
         "formula-highlight", 
+        "faq-section",
         "testimonial-section"
     ]
 }
