@@ -50,8 +50,42 @@
         }
     }
 
+    testimonials = () => {
+        const slider = d.querySelector('#testimonials');
+        if(slider) {
+            console.log("Testimonial Slider");
+            const splideContainer = new Splide('#testimonials', {
+                type: 'loop', 
+                perPage: 6, 
+                gap: '16px',
+                autoplay: false,
+                pagination: false,
+                arrows: false,
+                breakpoints: {
+                    991: { perPage: 3 }, 
+                    430: { perPage: 2 }
+                }
+            }).mount();
+
+            const arrows = document.querySelectorAll('.testimonials__slider--arrow');
+            if (!arrows.length) {
+                console.warn('No custom arrows found');
+                return;
+            }
+
+            arrows.forEach(arrow => {
+                arrow.addEventListener('click', () => {
+                    const direction = arrow.dataset.direction;
+                    console.log(`Arrow Direction ${direction}`);
+                    splideContainer.go(direction);
+                });
+            });
+        }
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
         productSlider();
+        testimonials();
         plyrIO();
     });
     
