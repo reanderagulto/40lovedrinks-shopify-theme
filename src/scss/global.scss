@@ -14,10 +14,11 @@
 @use 'components/product-carousel';
 @use 'components/subscription-highlights';
 @use 'components/formula';
+@use 'components/testimonials';
 
 /* Site Sections */
 @use 'sections/header';
 @use 'sections/footer';
 @use 'sections/newsletter';
-@use 'sections/header-alt';
-@use 'sections/footer-alt';
+// @use 'sections/header-alt';
+// @use 'sections/footer-alt';

@@ -66,7 +66,125 @@
             "settings": {
                 "formula_title": "The Ultimate Formula To Get Hydrated", 
                 "formula_desc": "<p>Get to know the ultimate formula for your daily needs</p>"
-            }
+            },
+            "blocks": {
+                "key_ingredient_1": {
+                    "type": "key_ingredient", 
+                    "settings": {
+                        "key_title": "Hydrolyzed Marine Collagen",
+                        "key_desc": "<p>Brighten, protect, and replenish with collagen + glutathione, and antioxidant drink mix.</p>",
+                        "key_icon": "vector-marine-collagen.svg"
+                    }
+                }, 
+                "key_ingredient_2": {
+                    "type": "key_ingredient", 
+                    "settings": {
+                        "key_title": "Stevia",
+                        "key_desc": "<p>Brighten, protect, and replenish with collagen + glutathione, and antioxidant drink mix.</p>",
+                        "key_icon": "vector-stevia.svg"
+                    }
+                }, 
+                "key_ingredient_3": {
+                    "type": "key_ingredient", 
+                    "settings": {
+                        "key_title": "Zinc",
+                        "key_desc": "<p>Improves focus, reduces stress, and enhances mental performance.</p>",
+                        "key_icon": "vector-zinc.svg"
+                    }
+                }, 
+                "key_ingredient_4": {
+                    "type": "key_ingredient", 
+                    "settings": {
+                        "key_title": "Magnesium",
+                        "key_desc": "<p>Relieves soreness, boosts energy production at a cellular level and aids muscle recovery.</p>",
+                        "key_icon": "vector-magnesium.svg"
+                    }
+                }, 
+                "key_ingredient_5": {
+                    "type": "key_ingredient", 
+                    "settings": {
+                        "key_title": "Sodium",
+                        "key_desc": "<p>Essential for hydration, reducing cramps, and boosting peak cellular performance.</p>",
+                        "key_icon": "vector-sodium.svg"
+                    }
+                }, 
+                "key_ingredient_6": {
+                    "type": "key_ingredient", 
+                    "settings": {
+                        "key_title": "Potassium",
+                        "key_desc": "<p>Accelerates recovery, regulates nerve signals, and fights muscle fatigue.</p>",
+                        "key_icon": "vector-potassium.svg"
+                    }
+                }, 
+            },
+            "block_order": [
+                "key_ingredient_1",
+                "key_ingredient_2",
+                "key_ingredient_3",
+                "key_ingredient_4",
+                "key_ingredient_5",
+                "key_ingredient_6"
+            ]
+        }, 
+        "testimonial-section": {
+            "type": "components-testimonials",
+            "settings": {
+                "section_title": "Customer Testimonials"
+            }, 
+            "blocks": {
+                "testimonial_1": {
+                    "type": "testimonial",
+                    "settings": {
+                        "author": "Roy De Guzman", 
+                        "quote": "It really brightens, protects, and replenishes my body during workouts and daily activities. Really recommend this drink!",
+                        "author_image": "shopify://shop_images/roy-de-guzman.webp",
+                        "is_featured": true,
+                    }
+                }, 
+                "testimonial_2": {
+                    "type": "testimonial",
+                    "settings": {
+                        "author": "Clarisse Jones", 
+                        "quote": "It really brightens, protects, and replenishes my body during workouts and daily activities. Really recommend this drink!",
+                        "author_image": "shopify://shop_images/clarisse-jones.webp",
+                        "is_featured": true,
+                    }
+                },
+                "testimonial_3": {
+                    "type": "testimonial",
+                    "settings": {
+                        "author": "Cherry Natividad", 
+                        "quote": "It really brightens, protects, and replenishes my body during workouts and daily activities. Really recommend this drink!",
+                        "author_image": "shopify://shop_images/cherry-natividad.webp",
+                        "is_featured": false
+                    }
+                },
+                "testimonial_4": {
+                    "type": "testimonial",
+                    "settings": {
+                        "author": "Samuel Cheng", 
+                        "quote": "It really brightens, protects, and replenishes my body during workouts and daily activities. Really recommend this drink!",
+                        "author_image": "shopify://shop_images/samuel-cheng.webp",
+                        "is_featured": false
+                    }
+                },
+                "testimonial_5": {
+                    "type": "testimonial",
+                    "settings": {
+                        "author": "John Camp", 
+                        "quote": "It really brightens, protects, and replenishes my body during workouts and daily activities. Really recommend this drink!",
+                        "author_image": "shopify://shop_images/john-camp.webp",
+                        "is_featured": false
+                    }
+                }
+            },
+            "block_order": [
+                "testimonial_1",
+                "testimonial_2",
+                "testimonial_3",
+                "testimonial_4",
+                "testimonial_5"
+            ]
         }
     },
     "order": [
@@ -75,6 +193,7 @@
         "cta-section", 
         "hero-section",
         "subscription-highlight",
-        "formula-highlight"
+        "formula-highlight", 
+        "testimonial-section"
     ]
 }

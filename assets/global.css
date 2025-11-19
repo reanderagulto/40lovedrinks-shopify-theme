@@ -428,8 +428,8 @@ p {
   position: relative;
 }
 .product-slider__inner-wrapper {
-  padding-top: 48px;
-  padding-bottom: 48px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 .product-slider__item {
   width: 100%;
@@ -491,7 +491,7 @@ p {
 }
 
 .subscription-highlight {
-  padding: 24px;
+  padding: 12px 24px;
   overflow: hidden;
 }
 .subscription-highlight .plyr--full-ui {
@@ -559,7 +559,7 @@ p {
 }
 
 .formula {
-  padding: 24px;
+  padding: 12px 24px;
 }
 .formula__inner-wrapper {
   border: 1px solid var(--color-primary);
@@ -575,6 +575,7 @@ p {
 }
 .formula__item {
   width: calc(50% - 24px);
+  flex-grow: 1;
 }
 .formula__item--image {
   margin-bottom: 24px;
@@ -606,6 +607,86 @@ p {
   font-size: inherit;
   font-weight: inherit;
   line-height: inherit;
+}
+
+.testimonials {
+  padding: 56px 0;
+  background: #F6F6F6;
+}
+.testimonials__inner-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+.testimonials__carousel-container {
+  margin-left: 24px;
+  margin-right: -183px;
+}
+.testimonials__carousel-nav {
+  margin-top: 0;
+  display: none;
+}
+.testimonials__list--item {
+  border-radius: 24px;
+  overflow: hidden;
+  width: 286.667px;
+  background-color: var(--color-secondary);
+}
+.testimonials__list--item--image {
+  width: 100%;
+  height: 200px;
+}
+.testimonials__list--item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.testimonials__list--text-content {
+  padding: 24px 16px 40px;
+  text-align: center;
+}
+.testimonials__list--ratings {
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.testimonials__list--ratings span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+}
+.testimonials__list--ratings svg {
+  width: 100%;
+  height: 100%;
+}
+.testimonials__list h4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: capitalize;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+}
+.testimonials__list h4 svg {
+  flex-shrink: 0;
+}
+.testimonials__list p {
+  text-align: center;
+  color: #717171;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+}
+.testimonials .site-title__lg {
+  margin-bottom: 40px;
 }
 
 /* Site Sections */
@@ -764,59 +845,6 @@ footer {
 .newsletter__body {
   margin-top: 1.5rem;
 }
-
-.header-alt {
-  height: 7rem;
-  padding: 16px 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 60;
-  background-color: var(--color-secondary);
-}
-.header-alt__inner-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-footer {
-  padding: 40px 0 32px;
-  background-color: var(--color-secondary);
-}
-
-.footer-alt {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 24px;
-}
-.footer-alt__socials {
-  gap: 12px;
-}
-.footer-alt__socials a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 34px;
-  height: 34px;
-  border-radius: 1000px;
-  border: 1px solid var(--color-primary);
-}
-.footer-alt__socials a svg {
-  width: 12px;
-  height: 12px;
-}
-.footer-alt__socials a svg path {
-  fill: var(--color-primary);
-}
-.footer-alt__copyright p {
-  color: #666;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: normal;
-}
 @media screen and (min-width: 321px) {
   .form__group--inline {
     flex-direction: row;
@@ -970,6 +998,36 @@ footer {
   .formula__header {
     text-align: center;
   }
+  .testimonials {
+    padding: 80px 0;
+  }
+  .testimonials__carousel-container {
+    margin-left: max(-8.333vw, -120px);
+    margin-right: 0;
+  }
+  .testimonials__carousel-nav {
+    margin: 40px auto 0;
+    width: -moz-max-content;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .testimonials__carousel-nav .btn:hover {
+    background-color: transparent;
+  }
+  .testimonials__carousel-nav .btn:hover svg path {
+    fill: var(--color-primary);
+  }
+  .testimonials__list--item {
+    width: calc(33.3333333333% - 40px);
+  }
+  .testimonials__list--image {
+    height: 280px;
+  }
+  .testimonials__list h4 {
+    font-size: 20px;
+  }
   .header__menu--desktop {
     display: flex;
   }
@@ -1007,9 +1065,6 @@ footer {
   }
   .newsletter {
     width: 50.579%;
-  }
-  footer {
-    padding: 80px 0;
   }
 }
 @media screen and (min-width: 1200px) {

@@ -7,48 +7,18 @@
             </div>
         </div>
         <div class="flex flex-wrap align-stretch formula__list">
-            <div class="flex flex-col formula__item">
-                <div class="formula__item--image">
-                    {{ 'vector-marine-collagen.svg' | inline_asset_content }}
+            {% for block in section.blocks %}
+                {%  assign icon = block.settings.key_icon %}
+                <div class="flex flex-col formula__item">
+                    <div class="formula__item--image">
+                        {{ icon | inline_asset_content }}
+                    </div>
+                    <h4>{{ block.settings.key_title }}</h4>
+                    <div class="formula__item--desc">
+                        {{ block.settings.key_desc }}
+                    </div>
                 </div>
-                <h4>Hydrolyzed Marine Collagen</h4>
-                <p>Brighten, protect, and replenish with collagen + glutathione, and antioxidant drink mix.</p>
-            </div>
-            <div class="flex flex-col formula__item">
-                <div class="formula__item--image">
-                    {{ 'vector-stevia.svg' | inline_asset_content }}
-                </div>
-                <h4>Stevia</h4>
-                <p>Brighten, protect, and replenish with collagen + glutathione, and antioxidant drink mix.</p>
-            </div>
-            <div class="flex flex-col formula__item">
-                <div class="formula__item--image">
-                    {{ 'vector-zinc.svg' | inline_asset_content }}
-                </div>
-                <h4>Zinc</h4>
-                <p>Improves focus, reduces stress, and enhances mental performance.</p>
-            </div>
-            <div class="flex flex-col formula__item">
-                <div class="formula__item--image">
-                    {{ 'vector-magnesium.svg' | inline_asset_content }}
-                </div>
-                <h4>Magnesium</h4>
-                <p>Relieves soreness, boosts energy production at a cellular level and aids muscle recovery.</p>
-            </div>
-            <div class="flex flex-col formula__item">
-                <div class="formula__item--image">
-                    {{ 'vector-sodium.svg' | inline_asset_content }}
-                </div>
-                <h4>Sodium</h4>
-                <p>Essential for hydration, reducing cramps, and boosting peak cellular performance.</p>
-            </div>
-            <div class="flex flex-col formula__item">
-                <div class="formula__item--image">
-                    {{ 'vector-potassium.svg' | inline_asset_content }}
-                </div>
-                <h4>Potassium</h4>
-                <p>Accelerates recovery, regulates nerve signals, and fights muscle fatigue.</p>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
@@ -66,6 +36,36 @@
             "type": "richtext", 
             "id": "formula_desc", 
             "label": "Description"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "key_ingredient", 
+            "name": "Key Ingredient", 
+            "settings": [
+                {
+                    "type": "text", 
+                    "id": "key_title", 
+                    "label": "Title"
+                }, 
+                {
+                    "type": "richtext", 
+                    "id": "key_desc",
+                    "label": "Description"
+                },
+                {
+                    "type": "text", 
+                    "id": "key_icon",
+                    "label": "Icon"
+                }
+            ]
+        }
+    ], 
+    "max_blocks": 12, 
+    "presets": [
+        {
+            "name": "Formula Highlight",
+            "category": "Sections"
         }
     ]
 }
