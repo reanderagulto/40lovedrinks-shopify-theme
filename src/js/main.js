@@ -82,6 +82,20 @@
         }
     }
 
+    featuredTestimonials = () => {
+        const slider = d.querySelector('#featured-testimonial');
+        if(slider) {
+            const splideContainer = new Splide('#featured-testimonial', {
+                type: 'loop', 
+                perPage: 2, 
+                gap: '16px',
+                autoplay: false,
+                pagination: false,
+                arrows: false
+            }).mount();
+        }
+    }
+
     siteFAQ = () => {
         const faq = d.querySelector('.site-faq');
         if(faq) {
@@ -130,6 +144,7 @@
     document.addEventListener('DOMContentLoaded', function() {
         productSlider();
         testimonials();
+        featuredTestimonials();
         plyrIO();
         siteFAQ();
         brandsSlider();
