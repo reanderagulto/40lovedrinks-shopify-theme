@@ -3,7 +3,7 @@
 {% assign collection = collections[collectionId] %}
 
 <div class="product-slider">
-    <div class="splide" id="product-slider">
+    <div class="splide product-slider-element" id="product-slider">
         <div class="splide__track">
             <div class="splide__list product-slider__list" id="product-slider">
                 {% for product in collection.products limit: limit %}
