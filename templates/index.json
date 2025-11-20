@@ -126,6 +126,15 @@
                 "key_ingredient_6"
             ]
         }, 
+        "featured-testimonial": {
+            "type": "components-featured-testimonial",
+            "settings": {
+                "featured_testimonials": [
+                    "roy-de-guzman",
+                    "clarisse-jones"
+                ]
+            }
+        },
         "faq-section": {
             "type": "pages-home-faq-section",
             "settings": {
@@ -248,62 +257,15 @@
         "testimonial-section": {
             "type": "components-testimonials",
             "settings": {
-                "section_title": "Customer Testimonials"
-            }, 
-            "blocks": {
-                "testimonial_1": {
-                    "type": "testimonial",
-                    "settings": {
-                        "author": "Roy De Guzman", 
-                        "quote": "It really brightens, protects, and replenishes my body during workouts and daily activities. Really recommend this drink!",
-                        "author_image": "shopify://shop_images/roy-de-guzman.webp",
-                        "is_featured": true,
-                    }
-                }, 
-                "testimonial_2": {
-                    "type": "testimonial",
-                    "settings": {
-                        "author": "Clarisse Jones", 
-                        "quote": "It really brightens, protects, and replenishes my body during workouts and daily activities. Really recommend this drink!",
-                        "author_image": "shopify://shop_images/clarisse-jones.webp",
-                        "is_featured": true,
-                    }
-                },
-                "testimonial_3": {
-                    "type": "testimonial",
-                    "settings": {
-                        "author": "Cherry Natividad", 
-                        "quote": "It really brightens, protects, and replenishes my body during workouts and daily activities. Really recommend this drink!",
-                        "author_image": "shopify://shop_images/cherry-natividad.webp",
-                        "is_featured": false
-                    }
-                },
-                "testimonial_4": {
-                    "type": "testimonial",
-                    "settings": {
-                        "author": "Samuel Cheng", 
-                        "quote": "It really brightens, protects, and replenishes my body during workouts and daily activities. Really recommend this drink!",
-                        "author_image": "shopify://shop_images/samuel-cheng.webp",
-                        "is_featured": false
-                    }
-                },
-                "testimonial_5": {
-                    "type": "testimonial",
-                    "settings": {
-                        "author": "John Camp", 
-                        "quote": "It really brightens, protects, and replenishes my body during workouts and daily activities. Really recommend this drink!",
-                        "author_image": "shopify://shop_images/john-camp.webp",
-                        "is_featured": false
-                    }
-                }
-            },
-            "block_order": [
-                "testimonial_1",
-                "testimonial_2",
-                "testimonial_3",
-                "testimonial_4",
-                "testimonial_5"
-            ]
+                "section_title": "Customer Testimonials", 
+                "testimonials": [
+                    "roy-de-guzman",
+                    "clarisse-jones",
+                    "cherry-natividad",
+                    "samuel-cheng",
+                    "john-camp"
+                ]
+            }
         }
     },
     "order": [
@@ -313,6 +275,7 @@
         "hero-section",
         "subscription-highlight",
         "formula-highlight", 
+        "featured-testimonial",
         "faq-section",
         "brand-section",    
         "testimonial-section",
