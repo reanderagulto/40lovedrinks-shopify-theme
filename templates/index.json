@@ -126,6 +126,14 @@
                 "key_ingredient_6"
             ]
         }, 
+        "new-product": {
+            "type": "pages-home-new-product-arrival",
+            "settings": {
+                "new_arrival": "mixie",
+                "slider_collection": "product-slider",
+                "product_limit": 3
+            }
+        },
         "featured-testimonial": {
             "type": "components-featured-testimonial",
             "settings": {
@@ -276,6 +284,7 @@
         "subscription-highlight",
         "formula-highlight", 
         "featured-testimonial",
+        "new-product",
         "faq-section",
         "brand-section",    
         "testimonial-section",

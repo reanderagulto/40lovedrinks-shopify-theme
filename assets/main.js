@@ -1,35 +1,38 @@
 (function(w, d) {
   productSlider = () => {
-    const slider = d.querySelector("#product-slider");
+    const slider = d.querySelectorAll(".product-slider-element");
     if (slider) {
-      const splideContainer = new Splide("#product-slider", {
-        type: "loop",
-        perPage: 3,
-        gap: "40px",
-        autoplay: false,
-        pagination: false,
-        arrows: false,
-        breakpoints: {
-          991: {
-            perPage: 2,
-            gap: "16px"
-          },
-          430: {
-            perPage: 1,
-            gap: "0px"
+      slider.forEach((sliderElement) => {
+        const splideContainer = new Splide(sliderElement, {
+          type: "loop",
+          perPage: 3,
+          gap: "40px",
+          autoplay: false,
+          pagination: false,
+          arrows: false,
+          breakpoints: {
+            991: {
+              perPage: 2,
+              gap: "16px"
+            },
+            430: {
+              perPage: 1,
+              gap: "0px"
+            }
           }
+        }).mount();
+        const wrapper = sliderElement.closest(".product-slider");
+        if (!wrapper) return;
+        const arrows = wrapper.querySelectorAll(".product-slider__arrow");
+        if (!arrows.length) {
+          console.warn("No custom arrows found for slider:", sliderElement);
+          return;
         }
-      }).mount();
-      const arrows = document.querySelectorAll(".product-slider__arrow");
-      if (!arrows.length) {
-        console.warn("No custom arrows found");
-        return;
-      }
-      arrows.forEach((arrow) => {
-        arrow.addEventListener("click", () => {
-          const direction = arrow.dataset.id;
-          console.log(`Arrow Direction ${direction}`);
-          splideContainer.go(direction);
+        arrows.forEach((arrow) => {
+          arrow.addEventListener("click", () => {
+            const direction = arrow.dataset.id;
+            splideContainer.go(direction);
+          });
         });
       });
     }
