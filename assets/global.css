@@ -642,6 +642,16 @@ footer {
 .newsletter__body {
   margin-top: 1.5rem;
 }
+.newsletter__success, .newsletter__error {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+.newsletter__success {
+  color: #00a400;
+}
+.newsletter__error {
+  color: #fc1c1c;
+}
 
 .header-alt {
   height: 7rem;

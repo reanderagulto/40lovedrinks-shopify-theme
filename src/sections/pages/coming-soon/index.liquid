@@ -19,17 +19,18 @@
             <div class="coming-soon__banner--form">
                 {% form 'customer', id: 'newsletter-form', class: 'form' %} 
                     <input type="hidden" name="contact[tags]" value="newsletter">
+                    <input type="hidden" name="contact[accepts_marketing]" value="true">
                     <div class="form__control bordered-black">
                         <input type="email" name="contact[email]" placeholder="Email address" required>
                     </div>
+                    {% if form.posted_successfully? %} 
+                        <p class="newsletter__success">Thank you for subscribing!</p> 
+                    {% elsif form.errors %}
+                        <p class="newsletter__error">{{ form.errors | default_errors }}</p> 
+                    {% endif %} 
                     <div class="flex align-center form__submit">
                         <button type="submit" class="btn full">Get 10% Off at Launch</button>
                     </div>
-                    {% if form.posted_successfully? %} 
-                        <p class="newsletter-success">Thank you for subscribing!</p> 
-                    {% elsif form.errors %}
-                        <p class="newsletter-error">{{ form.errors | default_errors }}</p> 
-                    {% endif %} 
                 {% endform %}
                 <p class="coming-soon__banner--disclaimer text-center">
                     Formulated with premium Japanese ingredients.
