@@ -4,97 +4,149 @@
     height: auto;
     display: flex;
     justify-content: center;
-    margin-top: 128px;
+    margin: 56px 0;
 
-    .site-title__xl {
-        font-size: 30px;
+    h1 {
+        font-size: 24px;
         font-weight: 700;
         line-height: 1.2;
         letter-spacing: -0.9px;
         text-transform: capitalize;
+        text-align: center;
+        color: var(--color-secondary);
+    }
+
+    &__logo {
+        position: relative;
+        width: max-content;
+        overflow: hidden;
+        z-index: 30;
+        position: absolute;
+        height: 40px;
+        top: 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__image {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 20;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
     }
 
     &__inner-wrapper {
-        max-width: 640px;
         width: 100%;
         margin-inline: auto;
     }
 
     &__banner {
         position: relative;
+        overflow: hidden;
         display: flex;
         align-items: center;
         justify-content: center;
-        overflow: hidden;
         border-radius: 16px;
-        border: 2px solid var(--color-primary);
-        background: #F2F2F2;
-
-        &--image {
-            position: relative;
-            width: 215px;
-            height: 215px;
-            margin-inline: auto;
-            z-index: 50;
-        }
-
-        &::before {
-            content: '';
-            position: absolute;
-            background: linear-gradient(270deg, #AFAFAF 1.46%, #FFF 26.46%, #FFF 69.14%, #AFAFAF 97.89%);
-            height: 151px;
-            top: 0;
-            width: 100%;
-            z-index: 20;
-        }
+        border: 6px solid var(--color-primary);
+        height: 300px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top center;
 
         &--title {
-            margin: 24px 0 8px;
+            position: relative;
+            z-index: 30;
         }
 
-        &--form {
-            margin-top: 24px;
+        // &--form {
+        //     margin-top: 24px;
 
-            #newsletter-form {
-                width: 100%;                
-            }
+        //     #newsletter-form {
+        //         width: 100%;                
+        //     }
 
-            .btn {
-                margin-top: 24px;
-                width: auto;
-                border-radius: 1000px;
-                flex-grow: 1;
-            }
+        //     .btn {
+        //         margin-top: 24px;
+        //         width: auto;
+        //         border-radius: 1000px;
+        //         flex-grow: 1;
+        //     }
 
-            .form__control {
-                border-radius: 8px;
-            }
+        //     .form__control {
+        //         border-radius: 8px;
+        //     }
+        // }
+
+        // .form__submit {
+        //     width: 100%;
+        // }
+
+        // &--disclaimer {
+        //     margin-top: 24px;
+        //     font-size: 12px;
+        //     font-weight: 400;
+        //     line-height: normal;
+        // }
+    }
+
+    &__banner-desc {
+        margin-top: 29px;
+
+        .site-title__xl {
+            margin-bottom: 17px;
         }
 
-        .form__submit {
-            width: 100%;
-        }
-
-        &--disclaimer {
-            margin-top: 24px;
-            font-size: 12px;
-            font-weight: 400;
-            line-height: normal;
+        p {
+            font-size: 20px;
+            margin-bottom: 16px;
         }
     }
 
-    @include abstracts.media-min(sm) {
-        margin-top: 152px;
+    @include abstracts.media-min(md) {
+        h1 {
+            font-size: 30px;
+        }
+
+        &__logo {
+            height: 70px;
+            top: 26px;
+        }
 
         &__banner {
-            &--image {
-                width: 430px;
-                height: 430px;
+            height: 600px;
+        }
+
+        &__banner-desc {
+            margin-top: 63px;
+
+            .site-title__xl {
+                margin-bottom: 41px;
             }
 
-            &::before {
-                height: 302px;
+            p {
+                margin-bottom: 32px;
             }
         }
     }
+}
+
+.container {
+    max-width: 1330px;
+    width: 100%;
+    padding-inline: 24px;
 }

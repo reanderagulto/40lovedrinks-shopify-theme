@@ -13,9 +13,10 @@
     "main": {
       "type": "pages-coming-soon-index",
       "settings": {
-        "banner_image": "shopify://shop_images/coming-soon-banner.png",
-        "banner_title": "Hydration that keeps up with you. Powered by collagen and electrolytes.",
-        "banner_desc": "<p>Get early access to 40-LOVE — designed for movement, clarity, and recovery.</p>"
+        "banner_image": "shopify://shop_images/Coming_Soon.png",
+        "banner_title": "<h1>hydrating<br>electrolytes + collagen<br>drink mix</h1>",
+        "banner_subtitle": "The New Flavor of Hydration.",
+        "banner_desc": "<p>Electrolytes + collagen in bold, refreshing flavors. <br>Be first to sip 40-LOVE.<br></p><p>Fuel for the mind, body, & soul.</p>"
       }
     }
   },
