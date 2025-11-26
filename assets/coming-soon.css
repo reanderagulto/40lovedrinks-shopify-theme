@@ -16,8 +16,7 @@
 }
 .coming-soon__logo {
   position: relative;
-  width: -moz-max-content;
-  width: max-content;
+  width: 71px;
   overflow: hidden;
   z-index: 30;
   position: absolute;
@@ -91,6 +90,7 @@
   }
   .coming-soon__logo {
     height: 70px;
+    width: 125px;
     top: 26px;
   }
   .coming-soon__banner {
