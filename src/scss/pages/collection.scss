@@ -1,0 +1,22 @@
+@use '../abstracts/' as abstracts; 
+
+.collection__banner {
+    padding: 40px 24px;
+
+    &--inner-wrapper {
+        max-width: 730px;
+        width: 100%;
+        padding: 24px;
+        margin-inline: auto;
+        background-color: ;
+    }
+
+    @include abstracts.media-min(md) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        &--inner-wrapper {
+            padding: 40px;
+        }
+    }
+}

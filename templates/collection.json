@@ -1,0 +1,24 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+ {
+    "layout": "collection",
+    "sections": {
+        "collection-banner": {
+            "type": "pages-products-banner",
+            "settings": {
+                "collection_banner_title": "Refresh, Replenish, and Radiate", 
+                "collection_banner_desc": "<p>At 40-LOVE, we believe staying active and looking your best is a match worth playing for.</p>"
+            }
+        }
+    },
+    "order": [
+        "collection-banner"
+    ]
+}
