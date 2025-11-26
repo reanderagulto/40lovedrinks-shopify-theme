@@ -14,9 +14,9 @@
       "type": "pages-coming-soon-index",
       "settings": {
         "banner_image": "shopify://shop_images/Coming_Soon.png",
-        "banner_title": "<h1>hydrating<br>electrolytes + collagen<br>drink mix</h1>",
-        "banner_subtitle": "The New Flavor of Hydration.",
-        "banner_desc": "<p>Electrolytes + collagen in bold, refreshing flavors. <br>Be first to sip 40-LOVE.<br></p><p>Fuel for the mind, body, & soul.</p>"
+        "banner_title": "<h1>hydrating<br/>electrolytes + collagen<br/>drink mix</h1>",
+        "banner_subtitle": "",
+        "banner_desc": "<p>Electrolytes + collagen in bold, refreshing flavors. <br/>Be first to sip 40-LOVE.<br/></p><p>Fuel for the mind, body, & soul.</p>"
       }
     }
   },
