@@ -1,0 +1,17 @@
+<article class="product-card__item">
+    <div class="product-card__item--image">
+        <img 
+            src="{{ product_image }}" 
+            alt="{{ product_title }}"
+            width="100%"
+            height="100%"
+        >
+    </div>
+    <div class="product-card__item--header">
+        <h3 class="site-title__md">{{ product_title }}</h3>
+        <span>{{ product_price | money }}</span>
+    </div>
+    <a href="{{ product_link }}" class="btn white bordered-black">
+        {{ product_button_label }}
+    </a>
+</article>
