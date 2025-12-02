@@ -1,0 +1,64 @@
+@use '../abstracts/' as abstracts; 
+
+.product-card {
+    &__list {
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    &__item {
+        width: 100%;
+        flex-grow: 1;
+
+        &--image {
+            max-width: 375px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 320px;
+            padding: 23.976px 10px 23.024px 11px;
+            border-radius: 24px;
+            margin: 0 auto 24px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                object-position: center;
+            }
+        }
+
+        &--header {
+            text-align: center;
+
+            .site-title__md {
+                font-weight: 400;
+            }
+
+            span {
+                display: block;
+                margin: 8px 0 24px;
+            }
+        }
+
+        .btn {
+            margin-inline: auto;
+            width: auto;
+            text-align: center;
+        }
+    }
+
+    @include abstracts.media-min(md) {
+        &__item {
+            width: calc(calc(100% / 3) - 40px);
+
+            .btn {
+                width: max-content;
+            }
+        }
+    }
+}

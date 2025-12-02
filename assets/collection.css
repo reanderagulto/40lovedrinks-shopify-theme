@@ -7,6 +7,31 @@
   width: 100%;
   padding: 24px;
   margin-inline: auto;
+  background-color: var(--color-primary);
+  border-radius: 24px;
+  color: var(--color-secondary);
+  text-align: center;
+}
+.collection__banner--inner-wrapper > * {
+  color: inherit;
+}
+.collection__banner--desc {
+  margin-top: 16px;
+}
+
+.collection__list {
+  padding: 12px 0;
+}
+.collection__list--header {
+  margin-bottom: 24px;
+}
+.collection__list--header-desc {
+  margin-top: 16px;
+}
+.collection__list--inner-wrapper {
+  padding: 40px 24px;
+  border: 1px solid var(--color-primary);
+  border-radius: 24px;
 }
 @media screen and (min-width: 992px) {
   .collection__banner {
@@ -15,5 +40,16 @@
   }
   .collection__banner--inner-wrapper {
     padding: 40px;
+  }
+  .collection__list {
+    padding: 56px 0;
+  }
+  .collection__list--header {
+    margin-bottom: 40px;
+  }
+  .collection__list--inner-wrapper {
+    border: 0;
+    border-radius: 0;
+    padding: 0;
   }
 }
