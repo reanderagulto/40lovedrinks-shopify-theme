@@ -1,0 +1,94 @@
+{% assign product = all_products[section.settings.new_arrival] %}
+
+<section class="new-product">
+    <div class="container new-product__inner-wrapper">
+        <div class="new-product__content">
+            <div class="new-product__text-wrapper">
+                <div class="new-product__text-content">
+                    <span>New Arrival</span>
+                    <h3>{{ product.title }}</h3>
+                    <div class="new-product__desc">
+                        {{ product.description }}
+                    </div>
+                    <a class="btn" href="{{ product.url }}">
+                        Get {{ product.title }} for only {{ product.price | money }}
+                    </a>
+                </div>
+            </div>
+            <div class="new-product__image">
+                <img 
+                    src="{{ product.featured_image | img_url: '500x' }}" 
+                    alt="{{ product.title }}"
+                    width="612"
+                    height="334"
+                >
+                <div class="new-product__banner">
+                    {% for i in (1..10) %}
+                        <span>New Arrival</span> {{ 'icon-lighting.svg' | inline_asset_content }}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {% if section.settings.show_slider %}
+            {% render 'components-product-slider' %}
+        {% endif %}
+    </div>
+</section>
+
+{% if section.settings.show_slider == false %}
+<section class="new-product__grid">
+    <div class="container">
+        <div class="new-product__grid--wrapper">        
+            <div class="product-card__list">
+                {% for product in collection.products limit: 6 %}
+                    {% assign product_image_url = product.featured_image | img_url: '500x' %}
+                    {% assign button_label = 'Get ' | append: product.title %}
+
+                    {% render 'components-product-card', 
+                        product_image: product_image_url,
+                        product_title: product.title,
+                        product_price: product.price,
+                        product_link: product.url,
+                        product_button_label: button_label
+                    %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>  
+{% endif %}
+
+{% schema %}
+{
+    "name": "New Product Arrival",
+    "settings": [
+        {
+            "type": "product", 
+            "id": "new_arrival",
+            "label": "New Product Arrival"
+        }, 
+        {
+            "type": "collection", 
+            "id": "slider_collection",
+            "label": "Select Collection"
+        },
+        {
+            "type": "number",
+            "id": "product_limit",
+            "label": "Number of Products",
+            "default": 3
+        }, 
+        {
+            "type": "checkbox", 
+            "id": "show_slider",
+            "label": "Show Product Slider",
+            "default": true
+        }
+    ],
+    "presets": [
+        {
+            "name": "Product Slider"
+        }
+    ]
+}
+{% endschema %}

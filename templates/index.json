@@ -127,11 +127,12 @@
             ]
         }, 
         "new-product": {
-            "type": "pages-home-new-product-arrival",
+            "type": "components-new-product-arrival",
             "settings": {
                 "new_arrival": "mixie",
                 "slider_collection": "product-slider",
-                "product_limit": 3
+                "product_limit": 3,
+                "show_slider": true
             }
         },
         "featured-testimonial": {

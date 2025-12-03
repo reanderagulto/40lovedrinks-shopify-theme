@@ -2,6 +2,7 @@
 
 .product-slider {   
     position: relative; 
+    margin-top: 40px;
 
     &__inner-wrapper {
         padding-top: 12px;
@@ -88,6 +89,8 @@
     }
 
     @include abstracts.media-min(md) {
+        margin-top: 40px;
+        
         &__inner-wrapper {
             padding-top: 64px;
             padding-bottom: 64px;
