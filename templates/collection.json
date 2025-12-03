@@ -57,6 +57,15 @@
                 "cta_card_2",
             ]
         },
+        "new-product": {
+            "type": "components-new-product-arrival",
+            "settings": {
+                "new_arrival": "mixie",
+                "slider_collection": "product-slider",
+                "product_limit": 3, 
+                "show_slider": false
+            }
+        },
         "subscription-highlight": {
             "type": "components-subscription-highlight",
             "settings": {
@@ -71,6 +80,7 @@
         "collection-banner",
         "collection-grid",
         "cta-section",
+        "new-product",
         "subscription-highlight"
     ]
 }
