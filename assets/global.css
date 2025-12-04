@@ -1164,6 +1164,7 @@ footer {
 }
 .new-product__grid--wrapper {
   padding: 32px 24px;
+  margin-bottom: 12px;
   border-radius: 24px;
   border: 1px solid var(--color-primary);
 }
@@ -1445,11 +1446,10 @@ footer {
   }
   .new-product__grid {
     padding: 0;
+    margin-bottom: 64px;
   }
   .new-product__grid--wrapper {
     padding: 56px 0;
-    border-radius: 0;
-    border: 0;
   }
 }
 @media screen and (min-width: 1200px) {
