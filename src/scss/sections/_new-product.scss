@@ -137,8 +137,7 @@
 
     @include abstracts.media-min(md) {
         padding: 80px 0;
-        background-color: var(--color-primary);
-
+        
         &__content {
             gap: 40px;
         }
