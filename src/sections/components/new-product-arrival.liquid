@@ -42,14 +42,12 @@
             <div class="product-card__list">
                 {% for product in collection.products limit: 6 %}
                     {% assign product_image_url = product.featured_image | img_url: '500x' %}
-                    {% assign button_label = 'Get ' | append: product.title %}
 
                     {% render 'components-product-card', 
                         product_image: product_image_url,
                         product_title: product.title,
                         product_price: product.price,
-                        product_link: product.url,
-                        product_button_label: button_label
+                        product_link: product.url
                     %}
                 {% endfor %}
             </div>

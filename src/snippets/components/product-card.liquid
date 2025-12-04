@@ -1,5 +1,8 @@
+{% assign button_label = product_title |  split: ' ' %}
+{% assign background = product_title | handleize %}
+
 <article class="product-card__item">
-    <div class="product-card__item--image">
+    <div class="product-card__item--image" style="background-color: var(--{{ background }})">
         <img 
             src="{{ product_image }}" 
             alt="{{ product_title }}"
@@ -12,6 +15,6 @@
         <span>{{ product_price | money }}</span>
     </div>
     <a href="{{ product_link }}" class="btn white bordered-black">
-        {{ product_button_label }}
+        {{ 'GET ' |  append: button_label[0] }}
     </a>
 </article>
