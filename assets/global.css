@@ -820,8 +820,11 @@ p {
   text-align: center;
 }
 
+.cta-section {
+  padding-inline: 24px;
+}
 .cta-section__inner-wrapper {
-  padding: 16px 24px;
+  padding: 16px 0;
 }
 .cta-section__card-list {
   gap: 24px;
