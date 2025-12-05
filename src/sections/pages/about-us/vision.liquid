@@ -1,0 +1,51 @@
+<section class="about__vision">
+    <div class="container">
+        <div class="flex align-stretch justify-center flex-wrap about__vision--inner-wrapper">
+            <div class="about__vision--text-content">
+                <h2 class="site-title__lg">{{ section.settings.vision_title }}</h2>
+                <div class="about__vision--description">
+                    {{ section.settings.vision_content }}
+                </div>
+            </div>
+            <div class="about__vision--image">
+                <div class="about__vision--image-container">
+                    <img 
+                        src="{{ section.settings.vision_image | img_url: '500x' }}" 
+                        alt="{{ section.settings.vision_title }}"
+                        width="605"
+                        height="500"
+                    >
+                </div>
+                <div class="about__vision--banner-text">
+                    {% for i in (1..10) %}
+                        <span>40-Love</span> {{ 'icon-lighting.svg' | inline_asset_content }}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Our Vision",
+    "settings": [
+        {
+            "type": "text",
+            "id": "vision_title",
+            "label": "Title",
+            "default": "A Vision for Nutritious Indulgence"
+        },
+        {
+            "type": "richtext", 
+            "id": "vision_content", 
+            "label": "Content"
+        }, 
+        {
+            "type": "image_picker", 
+            "id": "vision_image",
+            "label": "Image"
+        }  
+    ]
+}
+{% endschema %}
