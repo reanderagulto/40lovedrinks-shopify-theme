@@ -1,5 +1,13 @@
 @use '../abstracts/' as abstracts; 
 
+.subscription-highlight {
+    margin-bottom: 40px;
+
+    @include abstracts.media-min(md) {
+        margin-bottom: 64px;
+    }
+}
+
 .collection__banner {
     padding: 40px 24px;
 
