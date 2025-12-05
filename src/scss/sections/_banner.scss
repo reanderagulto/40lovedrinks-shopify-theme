@@ -1,0 +1,33 @@
+@use '../abstracts/' as abstracts; 
+
+.banner {
+    padding: 40px 24px;
+
+    &__inner-wrapper {
+        max-width: 730px;
+        width: 100%;
+        padding: 24px;
+        margin-inline: auto;
+        background-color: var(--color-primary);
+        border-radius: 24px;
+        color: var(--color-secondary);
+        text-align: center;
+
+        & > * {
+            color: inherit;
+        }
+    }
+
+    &__desc {
+        margin-top: 16px;
+    }
+
+    @include abstracts.media-min(md) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        &__inner-wrapper {
+            padding: 40px;
+        }
+    }
+}

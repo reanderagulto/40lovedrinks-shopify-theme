@@ -1,0 +1,25 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+    "name": "About Us",
+    "layout": "about",
+    "sections": {
+        "banner": {
+            "type": "components-banner",
+            "settings": {
+                "collection_banner_title": "We're More Than a Business",
+                "collection_banner_desc": "<p>We're a family on a journey to better health.</p>"
+            }
+        },
+    },
+    "order": [
+        "banner"
+    ]
+}

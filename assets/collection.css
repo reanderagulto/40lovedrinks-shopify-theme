@@ -11,26 +11,6 @@
   margin-bottom: 40px;
 }
 
-.collection__banner {
-  padding: 40px 24px;
-}
-.collection__banner--inner-wrapper {
-  max-width: 730px;
-  width: 100%;
-  padding: 24px;
-  margin-inline: auto;
-  background-color: var(--color-primary);
-  border-radius: 24px;
-  color: var(--color-secondary);
-  text-align: center;
-}
-.collection__banner--inner-wrapper > * {
-  color: inherit;
-}
-.collection__banner--desc {
-  margin-top: 16px;
-}
-
 .collection__list {
   padding: 12px 0;
 }
@@ -48,13 +28,6 @@
 @media screen and (min-width: 992px) {
   .subscription-highlight {
     margin-bottom: 64px;
-  }
-  .collection__banner {
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-  .collection__banner--inner-wrapper {
-    padding: 40px;
   }
   .collection__list {
     padding: 56px 0;

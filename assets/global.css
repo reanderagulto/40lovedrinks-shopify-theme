@@ -1035,6 +1035,26 @@ footer {
   margin-top: 1.5rem;
 }
 
+.banner {
+  padding: 40px 24px;
+}
+.banner__inner-wrapper {
+  max-width: 730px;
+  width: 100%;
+  padding: 24px;
+  margin-inline: auto;
+  background-color: var(--color-primary);
+  border-radius: 24px;
+  color: var(--color-secondary);
+  text-align: center;
+}
+.banner__inner-wrapper > * {
+  color: inherit;
+}
+.banner__desc {
+  margin-top: 16px;
+}
+
 .site-faq__list {
   padding: 16px 0;
   max-width: 900px;
@@ -1405,6 +1425,13 @@ footer {
   }
   .newsletter {
     width: 50.579%;
+  }
+  .banner {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .banner__inner-wrapper {
+    padding: 40px;
   }
   .new-product {
     padding: 80px 0;
