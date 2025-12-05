@@ -7,6 +7,7 @@
         <div class="splide__track">
             <div class="splide__list product-slider__list" id="product-slider">
                 {% for product in collection.products limit: limit %}
+                    {% assign button_label = product.title |  split: ' ' %}
                     <div class="splide__slide flex flex-col product-slider__item">
                         <div class="product-slider__item--image">
                             <img 
@@ -27,7 +28,7 @@
                                 </div>                 
                             </div>
                             <a class="btn full" href="{{ product.url }}">
-                                Get {{ product.title }}
+                                Get {{ button_label[0] }}
                             </a>
                         </div>
                     </div>
