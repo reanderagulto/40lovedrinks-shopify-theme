@@ -31,7 +31,15 @@
             "settings": {
                 "vision_title": "Our Story", 
                 "vision_content": "<p>With unwavering determination, 40-Loves started out by formulating three unique flavors that married delicious Asian inspirations with wellness — each one a sugar-free adventure enriched with electrolytes and vitamins. Today, our products still stands as a harmonious blend of rich Asian-inspired flavors and scientific research. Cheers to a world that embraces both health and deliciousness!</p>",
-                "story_image": "shopify://shop_images/vision-section-image.webp"
+                "vision_image": "shopify://shop_images/vision-section-image.webp"
+            }
+        },
+        "our-difference": {
+            "type": "pages-about-us-our-difference", 
+            "settings": {
+                "diff_title": "What Makes 40-Love Different?", 
+                "diff_desc": "<p>Not all sodium is the same. Sodium chloride, commonly known as table salt, is a fast-acting form that helps restore the sodium lost through sweat and supports hydration, muscle function, and nerve signaling. <br/><br/></p><p>Sodium citrate is a more advanced form, combining sodium with citric acid for smoother digestion and added benefits like buffering acid buildup in the body. It’s especially helpful during endurance efforts, as it can reduce the risk of cramping and fatigue. 40-Love, uses a smart blend of both to deliver hydration that works hard and feels good.</p>", 
+                "diff_image": "shopify://shop_images/our-difference.webp"
             }
         },
         "formula-highlight": {
@@ -99,11 +107,21 @@
                 "key_ingredient_6"
             ]
         }, 
+        "contact-us": {
+            "type": "components-contact-us-form", 
+            "settings": {
+                "contact_title": "Have a Question? We're Here to Help!", 
+                "contact_desc": "<p>Please fill out the contact form below, or reach out directly at <a href='mailto: info@40loves.com'>info@40loves.com</a>. We aim to respond within 24 hours or sooner.</p>",
+                "contact_button_label": "Submit"
+            }
+        }
     },
     "order": [
         "banner",
         "our-story",
         "our-vision",
-        "formula-highlight"
+        "our-difference",
+        "formula-highlight",
+        "contact-us"
     ]
 }

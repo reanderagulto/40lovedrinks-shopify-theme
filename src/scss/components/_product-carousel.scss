@@ -92,17 +92,13 @@
         margin-top: 40px;
         
         &__inner-wrapper {
-            padding-top: 64px;
-            padding-bottom: 64px;
+            padding-top: 32px;
+            padding-bottom: 32px;
         }
 
         &__item {
             width: calc(calc(100% / 3) - 40px);
             flex-grow: 1;
-
-            &--image {
-                width: calc(max(22.083vw, 318px));
-            }
         }
     }
 }
