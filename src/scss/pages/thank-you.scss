@@ -1,1 +1,22 @@
 @use '../abstracts/' as abstracts;
+
+.thank-you__hero {
+    padding-block: 0 12px;
+
+    .new-product__image {
+        max-width: 850px;
+        width: 100%;
+        margin-inline: auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    
+    @include abstracts.media-min(md) {
+        padding-block: 0 40px;    
+    }
+}

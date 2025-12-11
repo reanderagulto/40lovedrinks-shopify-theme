@@ -1,7 +1,7 @@
 @use '../abstracts/' as abstracts;
 
 .subscription-highlight {
-    padding: 12px 24px;
+    padding-block: 12px;
     overflow: hidden;
 
     .plyr--full-ui {
@@ -91,8 +91,8 @@
     }
 
     @include abstracts.media-min(md) {
-        padding: 0;
-
+        padding-block: 0; 
+        
         &__inner-wrapper {
             flex-direction: row;
         }

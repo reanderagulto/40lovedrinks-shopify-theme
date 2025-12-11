@@ -107,8 +107,4 @@
         padding-inline: map.get(abstracts.$padding, md);
         max-width: map.get(abstracts.$containers, lg);
     }
-
-    @include abstracts.media-min(lg) {
-        padding-inline: 0;
-    }
 }
