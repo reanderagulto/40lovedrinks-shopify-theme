@@ -60,7 +60,7 @@
             "type": "components-new-product-arrival",
             "settings": {
                 "new_arrival": "mixie",
-                "slider_collection": "product-slider",
+                "slider_collection": "",
                 "product_limit": 3,
                 "show_slider": false
             }
