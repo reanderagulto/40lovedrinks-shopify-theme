@@ -1,2 +1,75 @@
 @use '../abstracts/' as abstracts;
 
+.pricing__banner {
+    padding: 40px 24px;
+
+    @include abstracts.media-min(md) {
+        padding: 64px 0;
+    }
+}
+
+.vision-image {
+    margin-inline: auto;
+
+    img {
+        margin-inline: auto;
+    }
+}
+
+.about__difference {
+    padding: 0 0 12px;
+
+    &--inner-wrapper {
+        border: 1px solid var(--color-primary);
+        border-radius: 24px;
+        overflow: hidden;
+        flex-direction: column-reverse;
+    }
+
+    &--text-content {
+        width: 100%;
+        padding: 24px;
+
+        .site-title__lg {
+            text-transform: uppercase;
+            margin-bottom: 24px;   
+        }
+    }
+
+    &--image {
+        width: 100%; 
+        height: 220px;
+
+        img {
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover;
+            object-position: top center;
+        }
+    }
+
+    @include abstracts.media-min(md) {
+        padding: 32px 0;
+
+        &--inner-wrapper {
+            flex-direction: row-reverse;
+            padding: 0;
+        }
+
+        &--text-content {
+            width: 40.32%;
+            padding: 40px;
+        }
+
+        &--image {
+            width: 56.20%;
+            height: auto;
+        }
+    }
+}
+
+.formula {
+    @include abstracts.media-min(md) {
+        padding: 32px 0 80px;
+    }
+}
