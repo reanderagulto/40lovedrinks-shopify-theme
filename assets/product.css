@@ -1,0 +1,59 @@
+/** Breakpoints **/
+:root {
+  --zesty-coconut: #E5FFF2;
+  --zesty-lychee: #FFE8EF;
+  --winty: #FBDEC0;
+  --zesty-cucumber-lemon: #FCFBD2;
+  --mixie: #FFB5CC;
+}
+
+body {
+  background-color: #F1F1F1;
+}
+
+.homepage__faq--inner-wrapper,
+.new-product__grid--wrapper {
+  background-color: var(--color-secondary);
+}
+
+.homepage__faq {
+  padding: 40px 24px;
+}
+
+.homepage__faq--inner-wrapper {
+  padding-block: 24px;
+  border-radius: 24px;
+  border: 1px solid var(--color-primary);
+}
+
+.product__ingredients {
+  padding: 40px 24px 80px;
+}
+.product__ingredients--image {
+  margin-inline: auto;
+}
+.product__ingredients--list {
+  gap: 40px;
+  margin-top: 65px;
+}
+.product__ingredients--list-item {
+  text-align: center;
+}
+.product__ingredients--list-item h4 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.product__ingredients--list-item span {
+  display: block;
+  margin-top: 4px;
+  color: #717171;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: normal;
+}
+@media screen and (min-width: 992px) {
+  .homepage__faq {
+    padding-inline: 32px;
+  }
+}
