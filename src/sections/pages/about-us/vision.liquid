@@ -7,21 +7,7 @@
                     {{ section.settings.vision_content }}
                 </div>
             </div>
-            <div class="about__vision--image">
-                <div class="about__vision--image-container">
-                    <img 
-                        src="{{ section.settings.vision_image | img_url: '500x' }}" 
-                        alt="{{ section.settings.vision_title }}"
-                        width="605"
-                        height="500"
-                    >
-                </div>
-                <div class="about__vision--banner-text">
-                    {% for i in (1..10) %}
-                        <span>40-Love</span> {{ 'icon-lighting.svg' | inline_asset_content }}
-                    {% endfor %}
-                </div>
-            </div>
+            {% render 'components-vision' %}
         </div>
     </div>
 </section>
