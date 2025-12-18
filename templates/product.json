@@ -10,6 +10,10 @@
 {
     "layout": "product",
     "sections": {
+        "product-details": {
+            "type": "pages-product-section-details",
+            "settings": {}
+        },
         "faq-section": {
             "type": "pages-home-faq-section",
             "settings": {
@@ -61,61 +65,21 @@
                 "faq_question_5"
             ]
         },
-        "new-product": {
-            "type": "components-new-product-arrival",
-            "settings": {
-                "new_arrival": "",
-                "slider_collection": "thank-you-page",
-                "product_limit": 3,
-                "show_slider": false
-            }
+        "related-products": {
+            "type": "pages-product-section-related",
+            "settings": {}
         },
         "ingredients": {
-            "type": "pages-products-ingredients", 
+            "type": "pages-product-section-ingredients", 
             "settings": {
                 "ingredients_banner_image": "shopify://shop_images/trusted-brand-images.webp",
-            },
-            "blocks": {
-                "ingredient_1": {
-                    "type": "ingredient",
-                    "settings": {
-                        "name": "Sodium", 
-                        "volume": "1000 mg"
-                    }
-                },
-                "ingredient_2": {
-                    "type": "ingredient",
-                    "settings": {
-                        "name": "Potassium", 
-                        "volume": "600 mg"
-                    }
-                },
-                "ingredient_3": {
-                    "type": "ingredient",
-                    "settings": {
-                        "name": "Magnesium", 
-                        "volume": "100 mg"
-                    }
-                },
-                "ingredient_4": {
-                    "type": "ingredient",
-                    "settings": {
-                        "name": "Marine Collagen", 
-                        "volume": "40 mg"
-                    }
-                },
-            }, 
-            "block_order": [
-                "ingredient_1",
-                "ingredient_2",
-                "ingredient_3",
-                "ingredient_4",
-            ]
+            }
         }, 
     },
     "order": [
+        "product-details",
         "faq-section",
-        "new-product",
+        "related-products",
         "ingredients"
     ]
 }

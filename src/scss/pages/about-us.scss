@@ -183,6 +183,7 @@
         &--text-content, 
         &--image {
             width: calc(50% - 40px);
+            flex-grow: 1;
         }
 
         &--text-content {

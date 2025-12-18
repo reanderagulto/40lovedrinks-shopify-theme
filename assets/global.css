@@ -102,6 +102,8 @@ body {
 /** Breakpoints **/
 :root {
   --zesty-coconut: #E5FFF2;
+  --zesty-coconut-50: #00B75B;
+  --zesty-coconut-80: #42643E;
   --zesty-lychee: #FFE8EF;
   --winty: #FBDEC0;
   --zesty-cucumber-lemon: #FCFBD2;
