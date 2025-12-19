@@ -145,7 +145,7 @@
         }
     }
 
-    document.addEventListener('DOMContentLoaded', function() {
+    d.addEventListener('DOMContentLoaded', function() {
         productSlider();
         testimonials();
         featuredTestimonials();
