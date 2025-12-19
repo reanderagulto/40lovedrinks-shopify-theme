@@ -18,32 +18,37 @@
                 </div>
             </div>
             {%# End of Media Section #%}
-            
             {%# Start of Content #%}
             <div class="product__details--text-content">
-                {%# Product Header #%}
-                {% render 'product-header', 
-                    product_title: long_title, 
-                    product_price: price 
-                %}
+                <div class="product__details--text-inner">
+                    {%# Product Header #%}
+                    {% render 'product-header', 
+                        product_title: long_title, 
+                        product_price: price 
+                    %}
 
-                {%# Product Subscription #%}
-                {% render 'product-subscription-banner', 
-                    background: background
-                %}
+                    {%# Product Subscription #%}
+                    {% render 'product-subscription-banner', 
+                        background: background
+                    %}
 
-                {%# Purchase Options #%}
-                {% render 'product-purchase-option', 
-                    price: price
-                %}
+                    {%# Purchase Options #%}
+                    {% render 'product-purchase-option', 
+                        price: price
+                    %}
 
-                {%# Product Quantity #%}
-                {% render 'product-quantity' %}
+                    {%# Product Quantity #%}
+                    {% render 'product-quantity' %}
 
-                {%# Add to Cart #%}
-                {% render 'product-add-to-cart' %}
+                    {%# Add to Cart #%}
+                    {% render 'product-add-to-cart' %}
 
-
+                    {%# Payment List #%}
+                    {% render 'global-payment-methods' %}
+                </div>
+                <div class="product__details--accordion">
+                    {% render 'product-details-accordion' %}
+                </div>
             </div>
             {%# End of Product Text Content  #%}
         </div>

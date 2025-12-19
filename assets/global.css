@@ -295,18 +295,23 @@ p {
   text-align: center;
 }
 .btn:hover {
-  background: #333333;
-  color: var(--color-secondary);
+  background: #c4c4c4;
+  color: var(--color-primary);
 }
 .btn:hover svg path {
-  fill: var(--color-secondary);
+  fill: var(--color-primary);
 }
 .btn.white {
   background-color: var(--color-secondary);
   color: var(--color-primary);
 }
 .btn.white:hover {
-  background: #b5b4b4;
+  background: var(--color-primary);
+  color: var(--color-secondary);
+  border: 1px solid var(--color-primary);
+}
+.btn.white:hover svg path {
+  fill: var(--color-secondary);
 }
 .btn.full {
   width: auto;

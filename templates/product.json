@@ -69,11 +69,48 @@
             "type": "pages-product-section-related",
             "settings": {}
         },
+        
         "ingredients": {
-            "type": "pages-product-section-ingredients", 
+            "type": "components-nutritional-value", 
             "settings": {
                 "ingredients_banner_image": "shopify://shop_images/trusted-brand-images.webp",
-            }
+            },
+            "blocks": {
+                "ingredient_1": {
+                    "type": "ingredient",
+                    "settings": {
+                        "name": "Sodium", 
+                        "volume": "1000 mg"
+                    }
+                },
+                "ingredient_2": {
+                    "type": "ingredient",
+                    "settings": {
+                        "name": "Potassium", 
+                        "volume": "600 mg"
+                    }
+                },
+                "ingredient_3": {
+                    "type": "ingredient",
+                    "settings": {
+                        "name": "Magnesium", 
+                        "volume": "100 mg"
+                    }
+                },
+                "ingredient_4": {
+                    "type": "ingredient",
+                    "settings": {
+                        "name": "Marine Collagen", 
+                        "volume": "40 mg"
+                    }
+                },
+            }, 
+            "block_order": [
+                "ingredient_1",
+                "ingredient_2",
+                "ingredient_3",
+                "ingredient_4",
+            ]
         }, 
     },
     "order": [
