@@ -186,6 +186,10 @@ body {
         text-transform: capitalize;
         padding: 0 16px;
 
+        svg:last-of-type {
+            display: none;
+        }
+
         .btn-checkbox {
             display: flex;
             align-items: center;
@@ -195,10 +199,15 @@ body {
         &.active {
             background-color: var(--color-primary);
             color: var(--color-secondary);
-
-            svg path {
-                fill: var(--color-secondary);
+            
+            svg:first-of-type {
+                display: none;
             }
+
+            svg:last-of-type {
+                display: block;
+            }
+            
         }
     }
 }
@@ -214,9 +223,13 @@ body {
     }
 
     &--value {
+        all: unset;
+        width: 20px;
+        margin-inline: auto;
         font-size: 20px;
         font-weight: 500;
         line-height: normal;
+        text-align: center;
     }
 
     &--inner-wrapper {

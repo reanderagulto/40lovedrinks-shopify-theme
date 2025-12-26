@@ -145,6 +145,25 @@
         }
     }
 
+    quantityEvents = () => {
+        const qtyInput = document.getElementById('quantity');
+        const qtyButtons = document.querySelectorAll('.qty-button');
+
+        if(qtyButtons) {
+            qtyButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    let currentValue = parseInt(qtyInput.value, 10) || 1;
+                    const operation = this.dataset.operation;
+
+                    currentValue = operation === 'add' ? currentValue + 1 : Math.max(1, currentValue - 1);
+                    qtyInput.value = currentValue;
+                });
+            });
+        }
+    }
+
     d.addEventListener('DOMContentLoaded', function() {
         productSlider();
         testimonials();
@@ -152,6 +171,7 @@
         plyrIO();
         siteFAQ();
         brandsSlider();
+        quantityEvents();
     });
     
 })(window, document);

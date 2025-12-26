@@ -1,5 +1,5 @@
 (function(w, d) {
-  productDetails = () => {
+  productDetailsAccordion = () => {
     const viewMore = d.querySelector("#show-more-details");
     if (viewMore) {
       viewMore.addEventListener("click", function(e) {
@@ -13,6 +13,6 @@
     }
   };
   d.addEventListener("DOMContentLoaded", function() {
-    productDetails();
+    productDetailsAccordion();
   });
 })(window, document);

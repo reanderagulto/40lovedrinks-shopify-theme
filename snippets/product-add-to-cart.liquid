@@ -1,9 +1,9 @@
 <div class="flex align-center justify-center product__cart">
-    <button class="btn">
-        Add to Card 
+    <button type="submit" class="btn" id="add-to-cart-btn">
+        Add to Cart
         {{ 'icon-shopping-cart.svg' | inline_asset_content }}
     </button>
-    <button class="btn white bordered-black">
+    <button type="submit" class="btn white bordered-black" id="buy-now-btn" formaction="/checkout">
         Buy it now
         {{ 'icon-shopping-bag.svg' | inline_asset_content }}
     </button>

@@ -4,9 +4,17 @@
   --zesty-coconut-50: #00B75B;
   --zesty-coconut-80: #42643E;
   --zesty-lychee: #FFE8EF;
+  --zesty-lychee-50: #E2CBD2;
+  --zesty-lychee-80: #665D5F;
   --winty: #FBDEC0;
+  --winty-50: #DAC1A3;
+  --winty-80: #64594D;
   --zesty-cucumber-lemon: #FCFBD2;
+  --zesty-cucumber-lemon-50: #DFDEB5;
+  --zesty-cucumber-lemon-80: #656454;
   --mixie: #FFB5CC;
+  --mixie-50: #E298AF;
+  --mixie-80: #664851;
 }
 
 body {
@@ -145,6 +153,9 @@ body {
   text-transform: capitalize;
   padding: 0 16px;
 }
+.product__purchase-options .btn svg:last-of-type {
+  display: none;
+}
 .product__purchase-options .btn .btn-checkbox {
   display: flex;
   align-items: center;
@@ -154,8 +165,11 @@ body {
   background-color: var(--color-primary);
   color: var(--color-secondary);
 }
-.product__purchase-options .btn.active svg path {
-  fill: var(--color-secondary);
+.product__purchase-options .btn.active svg:first-of-type {
+  display: none;
+}
+.product__purchase-options .btn.active svg:last-of-type {
+  display: block;
 }
 
 .product__qty {
@@ -168,9 +182,13 @@ body {
   text-align: center;
 }
 .product__qty--value {
+  all: unset;
+  width: 20px;
+  margin-inline: auto;
   font-size: 20px;
   font-weight: 500;
   line-height: normal;
+  text-align: center;
 }
 .product__qty--inner-wrapper {
   margin-top: 16px;

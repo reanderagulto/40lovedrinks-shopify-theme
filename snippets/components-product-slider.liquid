@@ -24,7 +24,7 @@
                                     <h3 class="site-title__lg">{{ product.price | money }}</h3>
                                 </div>   
                                 <div class="product-slider__item--desc">
-                                    <p>{{ product.description }}</p>
+                                    {{ product.metafields.custom.excerpt | metafield_tag }}
                                 </div>                 
                             </div>
                             <a class="btn full" href="{{ product.url }}">

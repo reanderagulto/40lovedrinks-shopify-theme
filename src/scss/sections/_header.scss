@@ -61,11 +61,27 @@ header {
         display: flex;
         align-items: center;
         gap: 16px;
+        position: relative;
 
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+
+        sup {
+            font-size: 7px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 14px;
+            height: 14px;
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background-color: rgb(222 60 60);
+            color: var(--color-secondary);
+            border-radius: 50%;
         }
     }
 
