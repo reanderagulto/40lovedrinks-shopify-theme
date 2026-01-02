@@ -963,16 +963,24 @@ header {
   padding: 16px 0;
   border-bottom: 2px solid var(--color-primary);
   background-color: #f9f8f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .header__inner-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 .header__logo {
   width: 80px;
   height: 80px;
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .header__menu--desktop {
   gap: 44.67px;
