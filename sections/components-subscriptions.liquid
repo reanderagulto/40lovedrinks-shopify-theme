@@ -5,13 +5,15 @@
         {% for block in section.blocks %}
           <div class="subscriptions__item" {{ block.shopify_attributes }}>
             {% if block.settings.image != blank %}
-              <div class="subscriptions__item--image">
+              {% assign background = block.settings.title | handleize %}
+              <div class="subscriptions__item--image" style="background-color: var(--{{ background }})">
                 <img
                   src="{{ block.settings.image | image_url: width: 600 }}"
                   alt="{{ block.settings.image.alt | default: block.settings.title }}"
                   width="{{ block.settings.image.width | default: 600 }}"
                   height="{{ block.settings.image.height | default: 400 }}"
                   loading="lazy"
+                  class="responsive-image"
                 >
               </div>
             {% endif %}
@@ -93,8 +95,8 @@
   ],
   "presets": [
     {
-      "name": "Subscriptions",
-      "category": "Sections"
+      "name": "Subscriptions / Product Grid",
+      "category": "DOJO"
     }
   ]
 }
