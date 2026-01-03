@@ -1,0 +1,13 @@
+<aside class="header__mobile-menu">
+  <div class="header__mobile-menu--wrapper">
+    {% for link in settings.menu.links %}
+      {% assign is_active = false %}
+      {% if link.url == request.path or link.url == request.page_handle %}
+        {% assign is_active = true %}
+      {% endif %}
+      <a href="{{ link.url }}" class="nav-link{% if is_active %} active{% endif %}">
+        {{ link.title }}
+      </a>
+    {% endfor %}
+  </div>
+</aside>

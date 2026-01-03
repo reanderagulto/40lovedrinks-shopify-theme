@@ -39,7 +39,7 @@
           %}
             <input type="hidden" name="id" value="{{ product.variants.first.id }}">
             {%# Purchase Options #%}
-            {% render 'product-purchase-option' %}
+            {% comment %} {% render 'product-purchase-option' %} {% endcomment %}
             {%# Product Quantity #%}
             {% render 'product-quantity' %}
             {%# Add to Cart #%}

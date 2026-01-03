@@ -185,12 +185,48 @@
           }
       });
   };
-  productSlider();
-  testimonials();
-  featuredTestimonials();
-  plyrIO();
-  siteFAQ();
-  brandsSlider();
-  quantityHandler();
+  mobileNavToggle = () => {
+    const menuButton = document.querySelector('.header__hamburger');
+    const mobileMenu = document.querySelector('.header__mobile-menu');
+    const menuWrapper = document.querySelector('.header__mobile-menu--wrapper');
+    const body = document.body;
+
+    if (menuButton && mobileMenu && menuWrapper) {
+      // Toggle menu on button click
+      menuButton.addEventListener('click', (e) => {
+        e.stopPropagation(); // prevent immediate document click closing
+        menuButton.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+        body.classList.toggle('no-scroll');
+      });
+
+      // Close menu when clicking outside the wrapper
+      document.addEventListener('click', (e) => {
+        if (!mobileMenu.classList.contains('active')) return; // menu already closed
+        if (!menuWrapper.contains(e.target) && e.target !== menuButton) {
+          mobileMenu.classList.remove('active');
+          body.classList.remove('no-scroll');
+        }
+      });
+
+      // Optional: prevent clicks inside wrapper from closing the menu
+      menuWrapper.addEventListener('click', (e) => {
+        e.stopPropagation();
+      });
+    }
+  };
+
+  init = () => {
+    productSlider();
+    testimonials();
+    featuredTestimonials();
+    plyrIO();
+    siteFAQ();
+    brandsSlider();
+    quantityHandler();
+    mobileNavToggle();
+  }
+
+  init();
   
 })(window, document);

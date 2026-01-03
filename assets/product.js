@@ -45,9 +45,11 @@
     d.querySelector('.custom-arrow--prev').addEventListener('click', () => main.go('<'));
     d.querySelector('.custom-arrow--next').addEventListener('click', () => main.go('>'));
   };
-  d.addEventListener("DOMContentLoaded", function() {
+  init = () => {
     productDetails();
     productOptions();
     productSlider();
-  });
+  };
+
+  init();
 })(window, document);

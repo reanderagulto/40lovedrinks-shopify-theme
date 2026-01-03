@@ -19,6 +19,10 @@ body {
   min-height: 100svh;
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 html:has(dialog[scroll-lock][open], details[scroll-lock][open]) {
   overflow: hidden;
 }
@@ -1013,6 +1017,44 @@ header {
   width: -moz-max-content;
   width: max-content;
   display: block;
+}
+.header__mobile-menu {
+  position: absolute;
+  top: 169px;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  visibility: hidden;
+  opacity: 0;
+  background-color: #00000067;
+}
+.header__mobile-menu.active {
+  z-index: 1000;
+  visibility: visible;
+  opacity: 1;
+}
+.header__mobile-menu--wrapper {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 24px;
+  gap: 24px;
+  left: -100%;
+  height: 100vh;
+  width: 50%;
+  background-color: var(--color-secondary);
+  transition: left 0.3s linear;
+}
+.header__mobile-menu.active .header__mobile-menu--wrapper {
+    left: 0;
+}
+.header__mobile-menu--wrapper .nav-link {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-size: 18px;
+    line-height: normal;
+    font-weight: 600;
 }
 .header__icons {
   display: flex;
