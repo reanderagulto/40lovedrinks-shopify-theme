@@ -8,108 +8,23 @@
                 <h3>{{ section.settings.delivery_banner_title }}</h3>
                 {{ section.settings.delivery_banner_text }}
             </div>
-            <div class="product__reviews--total-reviews">
-                <div class="product__reviews--average-rating">
-                    <h4>5</h4>
-                    <div class="flex align-center justify-center product__reviews--ratings">
-                        {% for i in (1..5) %}
-                            <span>
-                                {{ 'icon-star.svg' | inline_asset_content }}
-                            </span>
-                        {% endfor %}
-                    </div>
-                    <p>10 reviews</p>
-                </div>
-                <div class="product__reviews--per-rating">
-                    {% for i in (1..5) reversed %}
-                    <div class="flex align-center product__reviews--per-rating-item">
-                        <div class="flex align-center product__reviews--rating-header">
-                            <h4>{{ i }}</h4>
-                            <span>{{ 'icon-star.svg' | inline_asset_content }}</span>
-                        </div>
-                        <div class="product__reviews--rating-bar">
-                            <div class="product__reviews--rating-bar-fill" style="width: 
-                                {% if forloop.first %}
-                                    {{ i | times: 20 }}%
-                                {% else %}
-                                    0%
-                                {% endif %};
-                            "></div>
-                        </div>
-                        <div class="product__reviews--rating-count">
-                            {% if forloop.first %}
-                                <span>10 reviews</span>
-                            {% else %}
-                                <span>0 reviews</span>
-                            {% endif %}
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
-                <div class="product__reviews--write-review">
-                    <button type="button" class="btn">
-                        Write a Review
-                    </button>
-                </div>
+            <!-- Start of Judge.me code -->
+            {% assign has_legacy = false %}
+            {% if product.metafields.judgeme.widget.size > 20 %}
+                {% assign has_legacy = true %}
+            {% endif %}
+            <div style='clear:both'>
             </div>
-            <div class="product__reviews--list">
-                {% for block in section.blocks limit: section.settings.number_of_reviews %}
-                    <div class="product__reviews--list-item">
-                        <div class="product__reviews--review-info">
-                            <div class="product__reviews--avatar">
-                                {% if block.settings.reviewer_avatar != blank %}
-                                    <img 
-                                        src="{{ block.settings.reviewer_avatar | img_url: '100x100' }}" 
-                                        alt="{{ block.settings.reviewer_name }}"
-                                        width="64"
-                                        height="64"
-                                    >
-                                {% else %}
-                                    <span>{{ block.settings.reviewer_name | slice: 0, 1 }}</span>
-                                {% endif %}
-                            </div>
-                            <div class="product__reviews--name">
-                                <h4>
-                                    {{ block.settings.reviewer_name }}
-                                    {{ 'icon-check-green.svg' | inline_asset_content }}
-                                </h4>
-                                <p>{{ block.settings.review_date }}</p>
-                            </div>
-                        </div>
-                        <div class="product__reviews--reviewer-ratings">
-                            <div class="flex align-center product__reviews--ratings">
-                                {% for i in (1..5) %}
-                                    <span>
-                                        {% if i <= block.settings.review_rating %}
-                                            {{ 'icon-star.svg' | inline_asset_content }}
-                                        {% else %}
-                                            {{ 'icon-star-outline.svg' | inline_asset_content }}
-                                        {% endif %}
-                                    </span>
-                                {% endfor %}
-                            </div> 
-                        </div>
-                        <div class="product__reviews--review-text">
-                            <p>{{ block.settings.review_text }}</p>
-                        </div>
-                        <div class="product__reviews--reviewer-image">
-                            {% if block.settings.reviewer_image != blank %}
-                                <img 
-                                    src="{{ block.settings.reviewer_image | img_url: '500x' }}" 
-                                    alt="{{ block.settings.reviewer_name }}"
-                                    width="100"
-                                    height="100"
-                                >
-                            {% endif %}
-                        </div>  
+            <div id='judgeme_product_reviews' class='jdgm-widget jdgm-review-widget' data-product-title='{{ product.title | escape }}' data-id='{{ product.id }}' data-product-id='{{ product.id }}' data-widget='review' data-auto-install='false' data-shop-reviews-count='{{ shop.metafields.judgeme.shop_reviews_count | default: 0 | escape }}' data-entry-point='review_widget.js' data-entry-key='review-widget/main.js'>
+                {% if has_legacy %}
+                    <div class='jdgm-legacy-widget-content' style='display: none;'>
+                        {{ product.metafields.judgeme.widget }}
                     </div>
-                {% endfor %}  
+                {% endif %}
             </div>
-            <div class="product__reviews--see-all-reviews">
-                <button type="button" class="btn">
-                    See More Reviews
-                </button>
-            </div>  
+            {% if product.metafields.judgeme.review_widget_data %}
+                <script>jdgm.data ||= {}; jdgm.data.reviewWidget ||= {}; jdgm.data.reviewWidget[{{ product.id }}] = {{ product.metafields.judgeme.review_widget_data }}</script>
+            {% endif %}<!-- End of Judge.me code --> 
         </div>
     </div>
 </section>

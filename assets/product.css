@@ -547,6 +547,86 @@ border-top: 0;
   margin-inline: auto;
   width: max-content;
 }
+.product__reviews--inner-wrapper #judgeme_product_reviews .jm-review-widget--standard-header {
+  padding: 0;
+}
+
+.product__reviews--inner-wrapper #judgeme_product_reviews .jm-media-preview {
+  display: none;
+}
+
+.product__reviews--inner-wrapper #judgeme_product_reviews .jm-review-widget-header__title {
+  display: none;
+}
+
+.product__reviews--inner-wrapper #judgeme_product_reviews .jm-average-rating-display .jm-cluster {
+  flex-direction: column;    
+  gap: 0;
+}
+
+.product__reviews--inner-wrapper #judgeme_product_reviews .jm-average-rating-display .jm-cluster .jm-text:first-of-type {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: normal;
+  color: var(--color-primary);
+  text-align: center;
+}
+
+.product__reviews--inner-wrapper #judgeme_product_reviews .jm-average-rating-display .jm-cluster .jm-text:last-of-type {
+  color: var(--color-primary);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 8px;
+}
+
+.product__reviews--inner-wrapper #judgeme_product_reviews .jm-review-widget-header__main-content {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-inline: auto;
+}
+
+.product__reviews--inner-wrapper #judgeme_product_reviews .jm-histogram.jm-review-widget-header__star-rating-histogram {
+  width: 100%;
+  max-inline-size: 100%;
+}
+
+.product__reviews--inner-wrapper #judgeme_product_reviews .jm-histogram-row__rating {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: normal;
+  color: var(--color-primary);
+  width: 14px;
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.product__reviews--inner-wrapper #judgeme_product_reviews .jm-progress-bar {
+  height: 8px;
+  border-radius: 0;
+}
+
+.product__reviews--inner-wrapper #judgeme_product_reviews .jm-action-buttons .jm-button {
+  height: 56px;
+  border-radius: 1000px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-inline: auto;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.product__reviews--inner-wrapper #judgeme_product_reviews .jm-action-buttons .jm-button:hover {
+  background: #c4c4c4;
+  color: var(--color-primary);
+  border: 0;
+}
 
 @media screen and (min-width: 992px) {
   .homepage__faq {

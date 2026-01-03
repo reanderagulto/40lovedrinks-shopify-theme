@@ -185,13 +185,12 @@
           }
       });
   };
-  d.addEventListener("DOMContentLoaded", function() {
-    productSlider();
-    testimonials();
-    featuredTestimonials();
-    plyrIO();
-    siteFAQ();
-    brandsSlider();
-    quantityHandler();
-  });
+  productSlider();
+  testimonials();
+  featuredTestimonials();
+  plyrIO();
+  siteFAQ();
+  brandsSlider();
+  quantityHandler();
+  
 })(window, document);
